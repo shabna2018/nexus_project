@@ -1,0 +1,126 @@
+/* ----- Container ----- */
+.topbar-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* ----- Top row (Help + Notification + Profile) ----- */
+.topbar-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px; /* match design */
+  padding: 0 32px; /* more spacing */
+  background-color: #fff;
+  box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.help-section {
+  display: flex;
+  align-items: right;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.help-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.help-text {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 6%;
+  color: #868DA6;
+}
+
+/* Right side (notification + profile) */
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.notification-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.profile-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1C212D;
+}
+
+.profile-role {
+  font-size: 12px;
+  color: #868DA6;
+}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.dropdown-icon {
+  width: 12px;
+  height: 12px;
+  margin-left: -4px;
+  cursor: pointer;
+}
+
+/* ----- Bottom row (Breadcrumbs) ----- */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 32px;
+  background-color: #F2F7FA;
+  border-bottom: 1px solid #E0E4EB;
+}
+
+.back-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.breadcrumb .inactive {
+  color: #868DA6;
+}
+
+.breadcrumb .active {
+  color: #FCD730;
+  font-weight: 500;
+}
+
+.breadcrumb-icon {
+  width: 14px;
+  height: 14px;
+}

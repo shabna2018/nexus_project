@@ -1,0 +1,558 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Roboto:wght@400&display=swap");
+
+.location-add-location-wrapper {
+  background-color: #f2f7fa;
+  padding: 40px;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.location-add-location-card {
+  background-color: #fff;
+  padding: 25px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ✅ Header Icon */
+.location-header-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+/* ✅ Header Styles */
+.location-add-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  margin-bottom: 0;
+}
+
+.location-add-header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.location-add-location-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.location-icon-img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) saturate(100%) invert(100%);
+}
+
+.location-add-form-title {
+  color: #000000;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  margin: 0;
+  line-height: 140%;
+}
+
+.location-add-close-btn {
+  background: none;
+  border: none;
+  color: #979798;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.location-add-close-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ✅ Divider Line */
+.location-add-divider {
+  border-top: 1px solid #dadce6;
+}
+
+/* ✅ Table Structure */
+.location-add-table-structure {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.location-add-column {
+  flex: 1;
+  border: 1px solid #dadce6;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.location-add-left-column {
+  flex: 2;
+}
+
+.location-add-right-column {
+  flex: 1;
+}
+
+.location-add-column-header {
+  background-color: #2f1e4f;
+  color: #fff;
+  padding: 12px 15px;
+}
+
+/* ✅ Typography for all headings */
+.location-add-heading,
+.location-add-cell label,
+.location-add-op-row label,
+.location-add-column-header {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0;
+}
+
+/* ✅ FIXED: Remove overflow and scrollbars from column content */
+.location-add-column-content {
+  padding: 20px;
+  overflow: visible !important;
+  height: auto !important;
+  max-height: none !important;
+}
+
+/* ✅ Location Info (Left Column) */
+.location-add-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.location-add-cell {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.location-add-cell input,
+.location-add-cell select {
+  padding: 10px;
+  border: 1px solid #dadce6;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ✅ Operation Hours (Right Column) - FIXED LAYOUT */
+.location-add-op-header-row {
+  display: flex;
+  margin-bottom: 10px;
+  padding-left: 120px;
+}
+
+.location-add-op-header-item {
+  flex: 1;
+  text-align: center;
+}
+
+.location-add-op-header-item span {
+  font-size: 16px;
+}
+
+.location-add-op-row {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 15px;
+}
+
+.location-add-op-row label {
+  width: 120px;
+  text-align: left;
+  flex-shrink: 0;
+}
+
+.location-add-time-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* ✅ Custom Time Picker - INCREASED WIDTH */
+.location-add-time-group {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 130px; /* INCREASED: From 100px to 130px */
+}
+
+.location-add-time-picker {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #dadce6;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  text-align: center;
+  height: 32px;
+  box-sizing: border-box;
+}
+
+.location-add-arrow-buttons3 {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+}
+
+.location-add-arrow-up3,
+.location-add-arrow-down3 {
+  background: none;
+  border: none;
+  font-size: 8px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  height: 10px;
+}
+
+/* ✅ Others Section */
+.location-add-others-section {
+  border: 1px solid #dadce6;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 50%;
+  background: #fff;
+  margin-left: 2%;
+}
+
+.location-add-others-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  padding-left: 35px;
+  gap: 20px;
+}
+
+.location-add-others-row {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.location-add-others-label {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0;
+  min-width: 160px;
+  flex-shrink: 0;
+}
+
+.location-add-others-input {
+  width: 78px;
+  height: 45px;
+  padding: 10px;
+  border: 0.89px solid #dadce6;
+  border-radius: 7.11px;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+.location-add-others-select {
+  width: 157px;
+  height: 45px;
+  padding: 10px;
+  border: 0.89px solid #dadce6;
+  border-radius: 7.11px;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+/* ✅ FIXED: Action Buttons - Remove bottom margin/space */
+.location-add-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px 25px 20px 0px !important; /* FIXED: Set bottom margin to 0 */
+  padding-bottom: 0 !important; /* FIXED: Remove any padding */
+}
+
+.location-add-save-btn,
+.location-add-cancel-btn {
+  padding: 12px 30px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.location-add-save-btn {
+  background-color: #fcd730;
+  color: #1c212d;
+}
+
+.location-add-cancel-btn {
+  background-color: #3b4053;
+  color: #ffffff;
+}
+
+/* ✅ Modal overrides */
+.modal-overlay .location-add-location-wrapper {
+  position: relative;
+  background: none;
+  padding: 0;
+  width: 95%;
+  max-width: 1400px;
+  height: 90vh;
+  max-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  overflow: hidden;
+}
+
+.modal-overlay .location-add-location-card {
+  background: white !important;
+  border-radius: 10px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-height: 100% !important;
+  overflow: hidden !important;
+  padding: 20px !important;
+  position: relative !important;
+  z-index: 10001 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  margin-bottom: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* ✅ FIXED: Header - Fixed height */
+.modal-overlay .location-add-form-header {
+  flex-shrink: 0;
+  margin-bottom: 10px;
+}
+
+.modal-overlay .location-add-divider {
+  flex-shrink: 0;
+  margin: 5px 0;
+}
+
+/* ✅ FIXED: Table Structure - Flexible but contained, no scrollbars */
+.modal-overlay .location-add-table-structure {
+  display: flex !important;
+  gap: 15px !important;
+  flex: 1 !important;
+  min-height: 0 !important;
+  padding: 10px 0 !important;
+  overflow: hidden !important;
+}
+
+/* ✅ FIXED: Left Column - No scrollbars */
+.modal-overlay .location-add-left-column {
+  flex: 1.5 !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+}
+
+.modal-overlay .location-add-left-column .location-add-column-content {
+  padding: 15px !important;
+  height: calc(100% - 50px) !important;
+  overflow: visible !important; /* FIXED: Remove scroll */
+  max-height: none !important; /* FIXED: Remove height restriction */
+}
+
+.modal-overlay .location-add-row {
+  margin-bottom: 8px !important;
+}
+
+.modal-overlay .location-add-cell input {
+  padding: 8px !important;
+  font-size: 13px !important;
+}
+
+/* ✅ FIXED: Right Column - No scrollbars */
+.modal-overlay .location-add-right-column {
+  flex: 1 !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+}
+
+.modal-overlay .location-add-right-column .location-add-column-content {
+  padding: 15px !important;
+  height: calc(100% - 40px) !important; /* INCREASED: From 50px to 40px for more content height */
+  overflow: visible !important; /* FIXED: Remove scroll */
+  max-height: none !important; /* FIXED: Remove height restriction */
+}
+
+.modal-overlay .location-add-op-row {
+  margin-bottom: 8px !important;
+}
+
+.modal-overlay .location-add-op-row label {
+  width: 80px !important;
+  font-size: 20px !important;
+}
+
+/* ✅ MODAL: Time Group - INCREASED WIDTH */
+.modal-overlay .location-add-time-group {
+  width: 110px !important; /* INCREASED: From 80px to 110px */
+}
+
+.modal-overlay .location-add-time-picker {
+  height: 28px !important; /* INCREASED: From 28px to 32px for better visibility */
+  font-size: 12px !important; /* INCREASED: From 11px to 12px */
+  padding: 6px 10px !important; /* INCREASED: Better padding */
+}
+
+/* ✅ Others Section - Fixed positioning */
+.modal-overlay .location-add-others-section {
+  flex-shrink: 0 !important;
+  width: 40% !important;
+  margin: 10px 0 !important;
+  height: auto !important;
+  min-height: 100px !important;
+}
+
+.modal-overlay .location-add-others-content {
+  padding: 15px 20px !important;
+  gap: 15px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+}
+
+.modal-overlay .location-add-others-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 15px !important;
+  width: 100% !important;
+}
+
+.modal-overlay .location-add-others-label {
+  font-size: 16px !important;
+  min-width: 150px !important;
+  font-weight: 400 !important;
+  color: #000 !important;
+}
+
+.modal-overlay .location-add-others-input,
+.modal-overlay .location-add-others-select {
+  height: 36px !important;
+  font-size: 13px !important;
+  padding: 8px 10px !important;
+  box-sizing: border-box !important;
+}
+
+.modal-overlay .location-add-others-input {
+  width: 70px !important;
+}
+
+.modal-overlay .location-add-others-select {
+  width: 120px !important;
+}
+
+/* ✅ FIXED: Action Buttons - Fixed at bottom, no extra space */
+.modal-overlay .location-add-form-actions {
+  flex-shrink: 0 !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+  gap: 15px !important;
+  margin: 10px 20px 0px 0 !important; /* FIXED: Bottom margin set to 0 */
+  padding-top: 0 !important;
+  padding-bottom: 0 !important; /* FIXED: Remove bottom padding */
+  border-top: none !important;
+}
+
+.modal-overlay .location-add-save-btn,
+.modal-overlay .location-add-cancel-btn {
+  padding: 8px 20px !important;
+  font-size: 14px !important;
+}
+
+/* ✅ Column Headers - Compact */
+.modal-overlay .location-add-column-header {
+  padding: 10px 15px !important;
+  font-size: 16px !important;
+  flex-shrink: 0;
+}
+
+/* Prevent body scroll when modal is open */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .modal-overlay .location-add-location-wrapper {
+    width: 98% !important;
+    height: 95vh !important;
+  }
+  
+  .modal-overlay .location-add-table-structure {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  
+  .modal-overlay .location-add-left-column,
+  .modal-overlay .location-add-right-column {
+    flex: none !important;
+    height: auto !important;
+  }
+  
+  .modal-overlay .location-add-right-column .location-add-column-content {
+    max-height: 250px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-overlay .location-add-location-wrapper {
+    width: 100% !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+  }
+  
+  .modal-overlay .location-add-location-card {
+    border-radius: 0 !important;
+    padding: 15px !important;
+  }
+  
+  .modal-overlay .location-add-others-content {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  
+  .modal-overlay .location-add-others-row {
+    margin-right: 0 !important;
+    margin-bottom: 10px !important;
+  }
+}

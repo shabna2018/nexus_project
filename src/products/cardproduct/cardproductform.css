@@ -1,0 +1,975 @@
+.modal-overlay1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  font-family: "Roboto", sans-serif;
+}
+
+.modal-container1 {
+  background: white;
+  border-radius: 8px;
+  width: 1200px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.modal-header1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 13px;
+  border-bottom: 1px solid #e5e7eb;
+  background: white;
+}
+
+.header-title1 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.folder-icon1 {
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 11px;
+}
+
+.title-text1 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.close-button23 {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* adjust as needed */
+  height: 50px; /* adjust as needed */
+}
+
+.close-icon22 {
+  width: 90%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.close-button1:hover {
+  color: #979798;
+}
+
+.close-button1:hover {
+  color: #979798;
+}
+
+.modal-content1 {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  background: transparent;
+}
+
+.main-content1 {
+  flex: 3;
+  margin-right: 0;
+  width: 100%;
+}
+
+.content-wrapper12 {
+  padding: 19px;
+  width: 100%;
+}
+
+.main-sections1 {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Product Section - Full Width */
+.product-section1 {
+  width: 100%;
+  height: 27vh;
+  background: white;
+  border-radius: 13.72px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 0.86px solid #d1d5db;
+  opacity: 1;
+}
+
+.section-header1 {
+  background: #2e2343;
+  color: white;
+  padding: 12px 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 17.15px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  margin: 0;
+  border: none;
+}
+
+.price-header1 {
+  background: #2e2343;
+}
+
+/* ENTITLEMENTS SECTION CUSTOM LAYOUT */
+.entitlements-row1 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 8px;
+  align-items: start;
+}
+
+.right-column1 {
+  justify-self: start;
+}
+
+.left-column1,
+.right-column1 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Move VIP under Quantity inside second column */
+.vip-card-group1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.vip-card-container1 {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+/* Third column now only for Add Games button */
+.third-column1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin-left: 0;
+}
+
+/* Cash Balance Input */
+.cash-balance-input1 {
+  width: 90px;
+  height: 26px;
+  border: 0.76px solid #d1d5db;
+  border-radius: 6.11px;
+}
+
+/* Card Expiry Group */
+.card-expiry-group1 {
+  position: relative;
+}
+
+.date-input-with-calendar1 {
+  position: relative;
+  display: inline-block;
+}
+
+.card-expiry-input1 {
+  width: 137px;
+  height: 26px;
+  border: 0.76px solid #d1d5db;
+  border-radius: 6.11px;
+  padding-right: 30px;
+}
+
+.calendar-icon1 {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  pointer-events: none;
+}
+
+/* Bonus Balance Input */
+.bonus-balance-input1 {
+  width: 90px;
+  height: 25px;
+  border: 0.76px solid #d1d5db;
+  border-radius: 6.11px;
+}
+
+/* Card Valid Group - Horizontal Layout */
+.card-valid-group1 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-valid-horizontal1 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.card-valid-input1 {
+  width: 69px;
+  height: 25px;
+  border: 0.76px solid #d1d5db;
+  border-radius: 6.11px;
+}
+
+.clear-button1 {
+  color: #ef4444;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  white-space: nowrap;
+}
+
+.clear-button1:hover {
+  color: #dc2626;
+}
+
+/* Quantity Group - positioned under Card Valid */
+.quantity-group1 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quantity-input1 {
+  width: 40px;
+  height: 25px;
+  border: 0.76px solid #d1d5db;
+  border-radius: 6.11px;
+}
+
+/* VIP Card Group - fix text wrapping */
+.vip-card-group1 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.vip-card-label1 {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  white-space: nowrap;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.vip-checkbox1 {
+  width: 16px;
+  height: 16px;
+  accent-color: #fcd730;
+  flex-shrink: 0;
+}
+
+/* Add Games Button - under VIP Card in third column */
+.third-column1 .add-games-button1 {
+  width: 120px;
+  height: 32px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+}
+
+.third-column1 .add-games-button1:hover {
+  background: linear-gradient(135deg, #059669, #047857);
+}
+
+/* Membership and Active Profile - narrower width */
+.entitlements-section1 .membership-group1 .form-select1,
+.entitlements-section1 .active-profile-group1 .form-select1 {
+  flex: 0 0 220px;
+}
+
+.bottom-entitlements-row1 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25%;
+  gap: 15px; /* ADDED GAP BETWEEN MEMBERSHIP AND ACTIVE PROFILE */
+}
+
+.add-games-button1 {
+  margin-top: 6px;
+}
+
+.entitlements-header1 {
+  background: #2e2343;
+}
+
+.product-content1 {
+  padding: 20px;
+  background: white;
+}
+
+/* UPDATED FORM ROW STYLES - REMOVE FLEX:1 TO PREVENT AUTO-EXPANSION */
+.form-row1 {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 16px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+.title-text1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500; /* Medium */
+  font-style: normal;
+  font-size: 21.43px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #000000; /* adjust if needed */
+  margin: 0; /* reset default h2 margin */
+}
+
+.form-row1.cols-31 {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.form-row1.cols-21 {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* UPDATED FORM GROUP - REMOVE FLEX:1 FROM INPUTS */
+.form-group1 {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.form-label1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13.72px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #000000;
+  margin-bottom: 0;
+  min-width: 40px;
+  flex-shrink: 0;
+}
+
+/* UPDATED INPUT/SELECT STYLES - REMOVE FLEX:1 */
+.form-input1,
+.form-select1 {
+  height: 34px;
+  padding: 4px 8px;
+  border-radius: 6.11px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #92929d;
+  background: white;
+  height: 26px;
+  box-sizing: border-box;
+  border: 0.76px solid #d1d5db;
+  opacity: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* REMOVED flex: 1; - this was causing the width expansion issue */
+}
+
+.form-input1:focus,
+.form-select1:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 1px #6366f1;
+}
+
+.form-input1:read-only {
+  background-color: #f9fafb;
+}
+
+/* SPECIFIC WIDTHS FOR PRODUCT SECTION - NOW INDEPENDENT */
+/* Row 1 - Product Info */
+.product-section1
+  .form-row1:nth-child(1)
+  .form-group1:nth-child(1)
+  .form-input1 {
+  width: 160px;
+}
+
+.product-section1
+  .form-row1:nth-child(1)
+  .form-group1:nth-child(2)
+  .form-input1 {
+  width: 300px !important; /* INCREASED WIDTH FOR PRODUCT NAME */
+}
+
+.product-section1
+  .form-row1:nth-child(1)
+  .form-group1:nth-child(3)
+  .form-select1 {
+  width: 160px;
+}
+
+/* Row 2 - Category, Display Group, Display Order */
+.product-section1
+  .form-row1:nth-child(2)
+  .form-group1:nth-child(1)
+  .form-select1 {
+  width: 180px;
+}
+
+.product-section1
+  .form-row1:nth-child(2)
+  .form-group1:nth-child(2)
+  .form-select1 {
+  width: 180px;
+}
+
+.product-section1
+  .form-row1:nth-child(2)
+  .form-group1:nth-child(3)
+  .form-input1 {
+  width: 80px;
+}
+
+/* SPECIFIC WIDTHS FOR PRICE SECTION - INDEPENDENT FROM PRODUCT SECTION */
+/* Face Value and Selling Price - KEEP ORIGINAL SIZES */
+.price-section1 .form-row1:nth-child(1) .form-group1:nth-child(1) .form-input1 {
+  width: 100px !important; /* Face Value */
+}
+
+.price-section1 .form-row1:nth-child(1) .form-group1:nth-child(2) .form-input1 {
+  width: 100px !important; /* Selling Price - STAYS SAME */
+}
+
+/* Tax Category and Tax 1% - More specific targeting */
+.price-section1
+  .section-content1
+  > .form-row1:nth-child(3)
+  .form-group1:nth-child(1)
+  .form-select1 {
+  width: 150px !important;
+}
+
+.price-section1
+  .section-content1
+  > .form-row1:nth-child(3)
+  .form-group1:nth-child(2)
+  .form-input1 {
+  width: 140px !important; /* INCREASED WIDTH FOR TAX 1% */
+}
+
+/* Alternative targeting for Tax 1% field */
+.price-section1 .form-input1[value="10.000000%"] {
+  width: 140px !important;
+  max-width: 140px !important;
+}
+
+/* Tax and Price No Tax */
+.price-section1 .form-row1:nth-child(5) .form-group1:nth-child(1) .form-input1 {
+  width: 70px !important;
+}
+
+.price-section1 .form-row1:nth-child(5) .form-group1:nth-child(2) .form-input1 {
+  width: 160px !important; /* INCREASED WIDTH FOR PRICE NO TAX */
+}
+
+/* Checkbox Section */
+.checkbox-section33 {
+  margin-top: 16px;
+}
+
+.checkbox-grid33 {
+  display: flex;
+  gap: 12px;
+}
+
+.checkbox-item33 {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13.72px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  white-space: nowrap;
+  color: #000000;
+}
+
+.checkbox-label33 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13.72px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #000000;
+}
+.folder-icon1 {
+  width: 20px; /* or 24px depending on design */
+  height: 20px;
+  object-fit: contain;
+  margin-left: 18px; /* spacing between icon and title */
+}
+.calendar-image1 {
+  width: 16px; /* adjust size as needed */
+  height: 16px;
+  object-fit: contain;
+  display: block;
+}
+
+
+.checkbox-label33 {
+  color: #000000;
+  font-weight: 400;
+}
+
+.checkbox-item1 {
+  order: -1;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  margin-left: 4px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: white;
+}
+
+.checkbox33 {
+  width: 16px;
+  height: 16px;
+  accent-color: #fcd730;
+  margin-left: 4px;
+}
+
+/* Bottom Sections Container */
+.bottom-sections1 {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 20px;
+}
+
+/* Remove border from the Tax Inclusive row */
+.price-section1 .tax-inclusive-row {
+  margin: 8px 0;
+  padding: 4px 0;
+  border: none;
+}
+
+/* Add a clean full-width line */
+.separator-line1 {
+  border-top: 1px solid #e5e7eb;
+  margin: 20px -30px;
+  width: calc(100% + 50px);
+}
+
+/* Price Section */
+.price-section1,
+.entitlements-section1 {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* PRICE SECTION FIELD OVERRIDES */
+.price-section1 .form-input1,
+.price-section1 .form-select1 {
+  height: 26px;
+  border-radius: 6.11px;
+  border: 0.76px solid #d1d5db;
+  font-size: 12px;
+  padding: 4px 8px;
+}
+
+/* Tax Inclusive (label before checkbox fix) */
+.price-section1 .checkbox-item1 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  order: unset;
+  margin: 8px 0;
+}
+
+.price-section1 .checkbox-label2 {
+  color: #000;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.price-section1 .checkbox12 {
+  width: 16px;
+  height: 16px;
+  accent-color: #fcd730;
+}
+
+/* Section content */
+.section-content1 {
+  padding: 20px;
+  background: white;
+}
+
+/* Date Input Group */
+.date-input-group1 {
+  display: flex;
+  gap: 4px;
+  align-items: stretch;
+}
+
+.date-input1 {
+  flex: 1;
+}
+
+.date-button1 {
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  font-size: 12px;
+  height: 36px;
+  box-sizing: border-box;
+}
+
+/* VIP Card checkbox positioning */
+.vip-checkbox-container1 {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 8px;
+}
+
+/* Add Games Button */
+.add-games-button1 {
+  width: 45%;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-left: 60%;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  margin-top: 30px;
+  font-family: "Roboto", sans-serif;
+}
+
+.add-games-button1:hover {
+  background: linear-gradient(135deg, #059669, #047857);
+}
+
+/* Sidebar (right side) */
+.sidebar1 {
+  width: 200px;
+  flex-shrink: 0;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  height: calc(100% - 40px); /* ENSURE FULL HEIGHT UTILIZATION */
+}
+
+.sidebar-content1 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+}
+
+/* Registration Section */
+.registration-section1 {
+  background: white;
+  border-radius: 13.72px;
+  border: 0.86px solid #d1d5db;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  height: 38%;
+}
+
+/* Ensure registration + active days containers keep rounded corners */
+.registration-section1,
+.active-days-section1 {
+  border-radius: 13.72px;
+  overflow: hidden;
+}
+
+/* Header Bar */
+.registration-header1 {
+  background: #2e2343;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 17.15px;
+  font-weight: 400;
+  padding: 12px 20px;
+  line-height: 140%;
+  margin: 0;
+}
+
+/* Body */
+.registration-body1 {
+  padding: 1px 20px;
+  display: flex;
+  flex-direction: column;
+  border-top: none;
+  background: white;
+}
+
+/* Checkbox Rows */
+.registration-checkbox-row1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1px 0;
+}
+
+.registration-label1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 13.72px;
+  color: #000000;
+  font-weight: 400;
+}
+
+.registration-checkbox1 {
+  width: 16px;
+  height: 16px;
+  accent-color: #fcd730;
+}
+
+.checkbox-label1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13.72px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #000000;
+  white-space: nowrap;
+}
+
+.lightning-icon1 {
+  color: #f59e0b;
+  font-size: 14px;
+  margin-left: 2px;
+}
+
+/* Registration Fields */
+.registration-fields1 {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.field-row1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.field-row1:last-child {
+  border-bottom: none;
+}
+
+.field-name1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13.72px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #374151;
+}
+
+/* Active Days Section */
+.active-days-section1 {
+  background: white;
+  border-radius: 13.72px;
+  border: 0.86px solid #d1d5db;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  flex: 1; /* MAKE IT FILL REMAINING HEIGHT TO MATCH PRICE+ENTITLEMENTS */
+}
+
+.active-days-header1 {
+  background: #2e2343;
+  color: white;
+  padding: 12px 20px;
+  font-weight: 400;
+  font-size: 17.15px;
+  font-family: "Roboto", sans-serif;
+  line-height: 140%;
+  margin: 0;
+}
+
+.active-days-content1 {
+  padding: 16px 20px;
+  background: white;
+}
+
+.day-row1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 0;
+}
+
+.day-name1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13.72px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #000000;
+}
+
+/* Last Updated Section */
+.last-updated-section1 {
+  padding: 12px 20px;
+  background: white;
+}
+
+.last-updated-info1 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+
+.last-updated-label1 {
+  color: black;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 400 !important;
+}
+
+.last-updated-value1 {
+  font-size: 12px;
+  margin-right: 20px;
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 400 !important;
+  color: #92929d; /* keep your color */
+}
+
+/* Footer */
+.modal-footer1 {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 16px 20px;
+  border-top: 1px solid #e5e7eb;
+  background: white;
+}
+
+.footer-button1 {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  color: white;
+  min-width: 80px;
+  font-family: "Roboto", sans-serif;
+}
+
+.footer-button1.save1 {
+  background: #fcd730;
+}
+
+.footer-button1.new1 {
+  background: #2258f8;
+}
+
+.footer-button1.duplicate1 {
+  background: #2258f8;
+}
+
+.footer-button1.cancel1 {
+  background: #3b4053;
+}
+
+/* Demo Container */
+.demo-container7 {
+  padding: 40px;
+  background: #f1f5f9;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.open-modal-button1 {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  font-family: "Roboto", sans-serif;
+}
+
+.open-modal-button1:hover {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+}
+
+.quantity-vip-row1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
