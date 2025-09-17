@@ -20,7 +20,7 @@ import ItemProductForm from "./products/itemproduct/itemproductform";
 import LedProduct from "./products/ledproduct/ledproduct";
 import StickerProduct from "./products/stickerproduct/stickerproduct";
 import ComboProduct from "./products/comboproduct/comboproduct";
-
+import ComboProductAdd from "./products/comboproduct/comboproductadd";
 import LedProductAdd from "./products/ledproduct/ledproductadd";
 import StickerProductAdd from "./products/stickerproduct/stickerproductadd";
 
@@ -59,6 +59,7 @@ function DashboardLayout() {
         
             <Route path="/sticker-product" element={<StickerProduct/>} />
             <Route path="/combo-product" element={<ComboProduct/>} />
+            <Route path="/combo-product-add" element={<ComboProductAdd />} />
             <Route path="/games" element={<GameSettings />} />
             <Route path="/accessprofile" element={<AccessProfile />} />
             <Route path="/addprofile" element={<AddProfile />} />

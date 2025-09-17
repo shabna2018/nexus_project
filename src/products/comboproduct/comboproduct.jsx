@@ -121,7 +121,7 @@ const CardProduct = () => {
         <div className="combo-product-action-buttons">
           <button 
             className="combo-product-btn-add"
-            onClick={() => navigate("/card-productform")} // ✅ navigate on click
+            onClick={() => navigate("/combo-product-add")} // ✅ navigate on click
           >
             Add
           </button>
