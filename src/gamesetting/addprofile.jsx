@@ -76,9 +76,10 @@ const AddProfileModal = () => {
             <img src={accessProfileIcon} alt="Access Profile" className="access-profile-icon" />
             <h2 className="modal-title">Add Profile</h2>
           </div>
-          <button onClick={() => navigate("/accessprofile")} className="item-add-close-button-item">
-            <img src={cancelIcon} alt="Close" className="item-add-close-icon-item" />
-          </button>
+          <button onClick={() => navigate("/accessprofile")} className="close-button">
+  <img src={cancelIcon} alt="Close" className="close-icon" />
+</button>
+
         </div>
 
         {/* Content */}

@@ -53,21 +53,16 @@
   color: #000000;
   margin: 0;
 }
-
-.combo-add-close-button-combo {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-  font-size: 18px;
-  color: #666;
-  border-radius: 4px;
+.item-close-button {
+background-color: white;
+border: none;
 }
-
-.combo-add-close-button-combo:hover {
-  background: #f3f4f6;
+.item-close {
+  width: 90%;
+  height: 80%;
+  object-fit: contain;
+  
 }
-
 /* Content Area */
 .combo-add-modal-content-combo {
   display: flex;
@@ -529,7 +524,7 @@ border: none;
 .combo-add-quantity-input-combo {
   width: 100%;
   border: none;
-  
+  background: transparent;
   font-size: 11px;
   color: #92929d;
   text-align: center;

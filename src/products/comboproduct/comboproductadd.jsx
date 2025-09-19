@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./comboproductadd.css";
 import { useNavigate } from "react-router-dom";
 
+import cancelIcon from '../../components/assets/iconoir_cancel.png'; 
 import plusIcon from "../../components/assets/plus_icon.png";
 import deleteIcon from "../../components/assets/delete_icon.png";
 import checklistIcon from "../../components/assets/Checklist.png";
@@ -67,11 +68,8 @@ const ComboProductAdd = () => {
 
             <h2 className="combo-add-title-text-combo">Combo Product</h2>
           </div>
-          <button
-            onClick={handleClose}
-            className="combo-add-close-button-combo"
-          >
-            ✕
+          <button onClick={() => navigate("/combo-product")} className="item-close-button">
+            <img src={cancelIcon} alt="Close" className="item-close" />
           </button>
         </div>
 
