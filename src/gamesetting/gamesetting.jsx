@@ -126,7 +126,7 @@ const CardProduct = () => {
           </button>
           <button 
             className="game-setting-btn-add"
-            onClick={() => navigate("/game-setting-form")}
+            onClick={() => navigate("/gamesadd")}
           >
             Add
           </button>

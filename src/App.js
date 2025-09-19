@@ -5,6 +5,7 @@ import TopBar from "./components/topbar";
 import Login from "./components/login";
 import LocationTable from "./location/locationtable";
 import GameSettings from  "./gamesetting/gamesetting";
+import GameSettingsAdd from  "./gamesetting/gamesettingadd";
 import GameCategory from "./gamesetting/gameCategory";
 import AccessProfile from "./gamesetting/accessprofile";
 import AddProfile from "./gamesetting/addprofile";
@@ -61,6 +62,7 @@ function DashboardLayout() {
             <Route path="/combo-product" element={<ComboProduct/>} />
             <Route path="/combo-product-add" element={<ComboProductAdd />} />
             <Route path="/games" element={<GameSettings />} />
+            <Route path="/gamesadd" element={<GameSettingsAdd />} />
             <Route path="/accessprofile" element={<AccessProfile />} />
             <Route path="/addprofile" element={<AddProfile />} />
             <Route path="/game-category" element={<GameCategory />} />
