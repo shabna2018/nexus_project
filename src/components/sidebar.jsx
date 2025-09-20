@@ -120,10 +120,32 @@ function Sidebar() {
             <img src={membershipIcon} alt="" />
             Membership
           </li>
-          <li>
+
+          {/* User Settings with submenu */}
+          <li 
+            className={`settings-item ${openMenu === "userSettings" ? "active" : ""}`}
+            onClick={() => toggleSubMenu("userSettings")}
+          >
             <img src={userIcon} alt="" />
             User Settings
           </li>
+          {openMenu === "userSettings" && (
+            <div className="submenu-container">
+              <ul className="submenu">
+                <li className={location.pathname === "/user" ? "active" : ""}>
+                  <Link to="/user" style={{ textDecoration: "none", color: "inherit" }}>
+                    User
+                  </Link>
+                </li>
+                <li className={location.pathname === "/user-role" ? "active" : ""}>
+                  <Link to="/user-role" style={{ textDecoration: "none", color: "inherit" }}>
+                    User Role
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          )}
+
           <li>
             <img src={reportIcon} alt="" />
             Reports
