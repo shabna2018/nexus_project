@@ -11,6 +11,8 @@ import AccessProfile from "./gamesetting/accessprofile";
 import AddProfile from "./gamesetting/addprofile";
 import CodeDev from "./gamesetting/codedev";
 
+import UserList from "./components/usersetting/userlist"
+
 import AddLocation from "./location/AddLocation";
 import CardProduct from "./products/cardproduct/cardproduct";
 
@@ -67,8 +69,8 @@ function DashboardLayout() {
             <Route path="/addprofile" element={<AddProfile />} />
             <Route path="/game-category" element={<GameCategory />} />
            <Route path="/code-development" element={<CodeDev />} />
-
-
+           <Route path="/userlist" element={<UserList />} />
+           
 
 
 

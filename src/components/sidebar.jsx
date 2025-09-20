@@ -133,7 +133,7 @@ function Sidebar() {
             <div className="submenu-container">
               <ul className="submenu">
                 <li className={location.pathname === "/user" ? "active" : ""}>
-                  <Link to="/user" style={{ textDecoration: "none", color: "inherit" }}>
+                  <Link to="/userlist" style={{ textDecoration: "none", color: "inherit" }}>
                     User
                   </Link>
                 </li>
