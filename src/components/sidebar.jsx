@@ -132,13 +132,13 @@ function Sidebar() {
           {openMenu === "userSettings" && (
             <div className="submenu-container">
               <ul className="submenu">
-                <li className={location.pathname === "/user" ? "active" : ""}>
+                <li className={location.pathname === "/userlist" ? "active" : ""}>
                   <Link to="/userlist" style={{ textDecoration: "none", color: "inherit" }}>
                     User
                   </Link>
                 </li>
-                <li className={location.pathname === "/user-role" ? "active" : ""}>
-                  <Link to="/user-role" style={{ textDecoration: "none", color: "inherit" }}>
+                <li className={location.pathname === "/userrole" ? "active" : ""}>
+                  <Link to="/userrole" style={{ textDecoration: "none", color: "inherit" }}>
                     User Role
                   </Link>
                 </li>

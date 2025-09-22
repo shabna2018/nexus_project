@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import searchIcon from "../../components/assets/search.png";
 import filterIcon from "../../components/assets/filter.png";
 import glass2Icon from "../../components/assets/glass2.png"; 
-import userIcon from "../../components/assets/combo.png"; // You'll need to add a user icon
+import userIcon from "../../components/assets/user.png"; // You'll need to add a user icon
 
 // Sample user data
 const userData = Array.from({ length: 15 }, (_, index) => ({
