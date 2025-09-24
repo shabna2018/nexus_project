@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import './userroleadd.css';
 import cancelIcon from '../../components/assets/iconoir_cancel.png'; 
 import userroleIcon from "../../components/assets/userroleIcon.png";
@@ -7,7 +8,7 @@ const UserRoleSetup = () => {
   const [selectedApp, setSelectedApp] = useState('Back Office System');
   const [userRole, setUserRole] = useState('System Administrator');
   const [description, setDescription] = useState('Redemption');
-
+  const navigate = useNavigate();
   const applicationItems = [
     'POS Software',
     'Back Office System',
@@ -41,7 +42,7 @@ const UserRoleSetup = () => {
             </div>
             <h2 className="modal-title">User Role Setup</h2>
           </div>
-          <button className="close-button">
+          <button onClick={() => navigate("/userrole")} className="close-button">
             <img src={cancelIcon} alt="Close" className="user-details-close" />
           </button>
         </div>
