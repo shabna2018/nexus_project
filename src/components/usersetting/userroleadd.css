@@ -1,0 +1,353 @@
+/* Modal Overlay and Container */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    z-index: 1000;
+    font-family: "Montserrat", -apple-system,"Segoe UI", "Roboto", "Oxygen", sans-serif;
+  }
+  
+  .modal-container {
+    background: #FFFFFF;
+    border-radius: 13px;
+    width: 100%;
+    max-width: 1024px;
+    max-height: 90vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Header Styles */
+  .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .star-icon {
+    width: 32px;
+    height: 32px;
+    background-color: #f3e8ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7c3aed;
+  }
+  
+  .star-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .modal-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    color: #9ca3af;
+    cursor: pointer;
+    padding: 4px;
+    transition: color 0.2s;
+  }
+  
+  .close-button:hover {
+    color: #6b7280;
+  }
+  
+  .close-button svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Modal Body */
+  .modal-body {
+    padding: 24px;
+    overflow-y: auto;
+    flex: 1;
+  }
+  
+  /* Section Styles */
+  .section {
+    margin-bottom: 32px;
+  }
+  
+  .section:last-child {
+    margin-bottom: 0;
+  }
+  
+  .section-header {
+    background-color: #2E2343;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 13px 13px 0 0;
+  }
+  
+  .section-header h3 {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  .section-content {
+    border: 1px solid #d1d5db;
+    border-top: none;
+    border-radius: 0 0 13px 13px;
+    overflow: hidden;
+  }
+  
+  /* General Settings Specific Styles */
+  .general-settings-content {
+    background-color: #FFFFFF;
+    padding: 16px;
+    border: 1px solid #d1d5db;
+    border-top: none;
+    border-radius: 0 0 13px 13px;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 12px;
+  }
+  
+  .form-row:last-child {
+    margin-bottom: 0;
+  }
+  
+  .form-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .form-group.id-group {
+    flex: 0 0 auto;
+  }
+  
+  .form-group.user-role-group {
+    flex: 1;
+  }
+  
+  .form-group.description-group {
+    flex: 1;
+  }
+  
+  .form-group label {
+    font-size: 11px;
+    font-weight: 500;
+    color: #374151;
+    white-space: nowrap;
+    margin: 0;
+  }
+  
+  .form-input {
+    padding: 6px 8px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 11px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+  .form-input.id-input {
+    width: 60px;
+  }
+  
+  .form-input.user-role-input {
+    min-width: 150px;
+    flex: 1;
+  }
+  
+  .form-input.description-input {
+    width: 100%;
+  }
+  
+  .form-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+  
+  .form-input[readonly] {
+    background-color: #f9fafb;
+    cursor: not-allowed;
+  }
+  
+  /* Two Column Layout */
+  .two-column-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  
+  @media (max-width: 1024px) {
+    .two-column-layout {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Scrollable List Styles */
+  .scrollable-list {
+    max-height: 256px;
+    overflow-y: auto;
+  }
+  
+  .list-item {
+    padding: 10px 12px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border-bottom: 1px solid #f3f4f6;
+    color: #374151;
+    font-size: 11px;
+  }
+  
+  .list-item:last-child {
+    border-bottom: none;
+  }
+  
+  .list-item:hover {
+    background-color: #f9fafb;
+  }
+  
+  .list-item.selected {
+    background-color: #fde047;
+    color: #000;
+    font-weight: 500;
+  }
+  
+  .list-item.outlined {
+    background-color: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fbbf24;
+    margin: 4px 8px;
+    border-radius: 4px;
+  }
+  
+  /* Description Item Styles */
+  .description-item {
+    padding: 10px 12px;
+    color: #374151;
+    border-bottom: 1px solid #f3f4f6;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+  }
+  
+  .description-item:last-child {
+    border-bottom: none;
+  }
+  
+  .checkbox-icon {
+    width: 14px;
+    height: 14px;
+    background-color: #fbbf24;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: white;
+  }
+  
+  .checkbox-icon svg {
+    width: 10px;
+    height: 10px;
+  }
+  
+  /* Button Group */
+  .button-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #e5e7eb;
+  }
+  
+  /* Button Styles */
+  .btn {
+    padding: 6px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .btn-save {
+    background-color: #3b82f6;
+    color: white;
+  }
+  
+  .btn-save:hover {
+    background-color: #2563eb;
+  }
+  
+  .btn-okay {
+    background-color: #fbbf24;
+    color: #000;
+  }
+  
+  .btn-okay:hover {
+    background-color: #f59e0b;
+  }
+  
+  .btn-cancel {
+    background-color: #6b7280;
+    color: white;
+  }
+  
+  .btn-cancel:hover {
+    background-color: #4b5563;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .modal-overlay {
+      padding: 8px;
+    }
+    
+    .modal-header {
+      padding: 16px;
+    }
+    
+    .modal-body {
+      padding: 16px;
+    }
+    
+    .form-row {
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .button-group {
+      flex-direction: column;
+    }
+    
+    .btn {
+      width: 100%;
+    }
+  }

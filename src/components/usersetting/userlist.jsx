@@ -124,7 +124,7 @@ const UserList = () => {
         <div className="user-list-action-buttons">
           <button 
             className="user-list-btn-add"
-            onClick={() => navigate()}
+            onClick={() => navigate('/userdetails')}
           >
             Add
           </button>

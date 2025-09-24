@@ -13,7 +13,8 @@ import CodeDev from "./gamesetting/codedev";
 
 import UserList from "./components/usersetting/userlist"
 import UserRole from "./components/usersetting/userrole"
-
+import UserDetails from "./components/usersetting/userdetailsadd"
+import UserRoleAdd from "./components/usersetting/userroleadd"
 import AddLocation from "./location/AddLocation";
 import CardProduct from "./products/cardproduct/cardproduct";
 
@@ -72,16 +73,8 @@ function DashboardLayout() {
            <Route path="/code-development" element={<CodeDev />} />
            <Route path="/userlist" element={<UserList />} />
            <Route path="/userrole" element={<UserRole />} />
-           
-
-
-
-
-
-
-
-
-
+           <Route path="/userdetails" element={<UserDetails />} />
+           <Route path="/userroleadd" element={<UserRoleAdd />} />
 
           </Routes>
         </div>

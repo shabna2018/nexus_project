@@ -46,8 +46,7 @@ const UserRole = () => {
   };
 
   const handleAdd = () => {
-    console.log("Adding new user role...");
-    navigate('/user-role-add');
+    navigate('/userroleadd');
   };
 
   const filteredData = userRoleData.filter(role => {
