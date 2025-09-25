@@ -112,10 +112,26 @@ function Sidebar() {
             </div>
           )}
 
-          <li>
+          {/* Inventory menu with submenu */}
+          <li 
+            className={`settings-item ${openMenu === "inventory" ? "active" : ""}`}
+            onClick={() => toggleSubMenu("inventory")}
+          >
             <img src={inventoryIcon} alt="" />
             Inventory
           </li>
+          {openMenu === "inventory" && (
+            <div className="submenu-container">
+              <ul className="submenu">
+                <li className={location.pathname === "/stock" ? "active" : ""}>
+                  <Link to="/stock" style={{ textDecoration: "none", color: "inherit" }}>
+                    Stocks
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          )}
+
           <li>
             <img src={membershipIcon} alt="" />
             Membership

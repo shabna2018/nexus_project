@@ -29,7 +29,7 @@ import ComboProductAdd from "./products/comboproduct/comboproductadd";
 import LedProductAdd from "./products/ledproduct/ledproductadd";
 import StickerProductAdd from "./products/stickerproduct/stickerproductadd";
 
-
+import InventoryStock from "./components/inventory/stock";
 import CoinProductForm from "./products/coinproduct/coinproductform";
 import CardProductForm from "./products/cardproduct/cardproductform";
 import TimeProductForm from "./products/timeproduct/timeproductform";
@@ -75,7 +75,7 @@ function DashboardLayout() {
            <Route path="/userrole" element={<UserRole />} />
            <Route path="/userdetails" element={<UserDetails />} />
            <Route path="/userroleadd" element={<UserRoleAdd />} />
-
+           <Route path="/stock" element={<InventoryStock />} />
           </Routes>
         </div>
       </div>
