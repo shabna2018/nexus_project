@@ -151,11 +151,21 @@ function Sidebar() {
               </ul>
             </div>
           )}
+   <li 
+  className={`settings-item ${openMenu === "membership" ? "active" : ""}`}
+  onClick={() => toggleSubMenu("membership")}
+>
+  <Link 
+    to="/membership" 
+    style={{ textDecoration: "none", color: "inherit", display: "flex", alignItems: "center", width: "100%" }}
+    onClick={() => setOpenMenu("")} // this will close other open menus
+  >
+    <img src={membershipIcon} alt="" />
+    Membership
+  </Link>
+</li>
 
-          <li>
-            <img src={membershipIcon} alt="" />
-            Membership
-          </li>
+
 
           {/* User Settings with submenu */}
           <li 

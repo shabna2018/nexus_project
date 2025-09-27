@@ -36,8 +36,8 @@ import CardProductForm from "./products/cardproduct/cardproductform";
 import TimeProductForm from "./products/timeproduct/timeproductform";
 import DisplayGroup from "./products/displaygroup/displaygroup"; 
 import DisplayGroupAdd from './products/displaygroup/displaygroupadd';
-
-
+import Membership from './components/membership/membership';
+import MembershipAdd from './components/membership/membershipadd';
 import "./App.css";
 import { Import } from "lucide-react";
 
@@ -81,6 +81,8 @@ function DashboardLayout() {
            <Route path="/quickinventory" element={<QuickInventory />} />
            <Route path="/display-group" element={<DisplayGroup />} /> {/* ✅ Added DisplayGroup route */}
             <Route path="/display-group-add" element={<DisplayGroupAdd />} />
+            <Route path="/membership" element={<Membership />} />
+            <Route path="/membershipadd" element={<MembershipAdd />} />
           </Routes>
         </div>
       </div>
