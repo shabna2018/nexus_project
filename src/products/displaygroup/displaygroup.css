@@ -1,0 +1,457 @@
+/* Base Styles */
+.display-group-container {
+  background-color: #f8fafc;
+  height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-top: 20px; 
+}
+
+/* Header Styles */
+.display-group-header {
+  margin-bottom: 24px;
+  margin-top: 0;
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+  gap: 8px;
+}
+
+.title-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.controls-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.refresh-btn {
+  align-self: flex-start;
+  background-color: #42C700;
+  color: white;
+  margin-top: 4px;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.refresh-btn:hover {
+  background-color: #059669;
+}
+
+/* Table Container */
+.table-container {
+  width: 834px;
+  max-height: 700px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 0.89px solid #e5e7eb;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 100px 140px 1fr 140px;
+  align-items: center;
+  border-bottom: 2px solid #e5e7eb;
+  background-color: #ffffff;
+  flex-shrink: 0;
+  height: 40px;
+  padding: 0; /* Remove any padding */
+  margin: 0; /* Remove any margin */
+}
+
+.column-header {
+  font-size: 18px;
+  font-weight: 700;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0px 20px;
+  height: 100%;
+  position: relative;
+  border-right: 1px solid #e5e7eb;
+}
+
+/* Remove border from the last two columns */
+.column-header:nth-child(3),
+.column-header:nth-child(4) {
+  border-right: none;
+}
+
+.header-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 4px 24px; /* Reduced vertical padding from 16px to 8px */
+  height: 100%;
+  align-items: center;
+}
+
+.add-group-btn {
+  background-color: #2258F8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 10px; /* Reduced vertical padding from 12px to 8px */
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.sort-arrow {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+}
+
+.add-group-btn:hover {
+  background-color: #2563eb;
+}
+
+/* Group List */
+.group-list {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-top: 12px;
+}
+
+.group-item {
+  border-bottom: 2px solid #f3f4f6;
+  position: relative;
+}
+
+.group-item:last-child {
+  border-bottom: none;
+}
+
+/* Main Group Row */
+.group-main-row {
+  display: grid;
+  grid-template-columns: 100px 140px 1fr 140px;
+  align-items: center;
+  background-color: #2E2343;
+  color: white;
+  position: relative;
+  height: 56px;
+}
+
+.group-main-row > div {
+  padding: 0px 33px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.group-main-row > div:last-child {
+  border-right: none;
+}
+
+/* Remove border-right from group name cell */
+.group-name-cell {
+  border-right: none !important;
+}
+
+.active-cell {
+  justify-content: center;
+}
+
+.active-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active-checkmark {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.checklist-icon1 {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.display-order-cell {
+  background-color: #FCD730;
+  margin: 0px;
+  padding: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.2) !important;
+  justify-content: center;
+}
+
+.order-number {
+  color: #92400e;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.group-name {
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+}
+
+.group-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  align-items: center;
+  border-right: none;
+  position: relative;
+}
+
+.group-actions-cell {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  align-items: center;
+  border-right: none;
+  position: relative;
+}
+
+/* Add vertical separator between group action buttons */
+.group-actions-cell::before {
+  content: '' !important;
+  position: absolute;
+  right: 8.9%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1px;
+  height: 20px;
+  background-color: #FFFFFF;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
+.action-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.action-icon.small {
+  width: 16px;
+  height: 16px;
+}
+
+.group-main-row .action-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Sub Items */
+.sub-items {
+  background-color: #ffffff;
+  position: relative;
+}
+
+.sub-item {
+  display: grid;
+  grid-template-columns: 100px 140px 1fr 140px;
+  align-items: center;
+  color: #374151;
+  height: 60px;
+  position: relative;
+}
+
+/* Add separator line after each sub-item */
+.sub-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 550px;
+  top: 50px;
+  left: 260px;
+  right: 140px;
+  height: 1px;
+  background-color: #D5D5D5;
+}
+
+/* Remove the line from the last sub-item */
+.sub-item:last-child::after {
+  display: none;
+}
+
+.sub-item > div {
+  padding: 0px 24px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.sub-item > div:not(:last-child) {
+  border-right: 1px solid #D5D5D5;
+}
+
+/* Remove border-right from sub-item content cell */
+.sub-item-content-cell {
+  border-right: none !important;
+}
+
+.sub-item-active-cell,
+.sub-item-order-cell {
+  justify-content: center;
+}
+
+.sub-item-content {
+  font-size: 14px;
+  color: #6b7280;
+  padding-left: 16px;
+}
+
+.sub-item-actions-cell {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  align-items: center;
+  border-right: none !important;
+  position: relative;
+}
+
+.sub-item-actions-cell .action-btn {
+  color: #6b7280;
+  width: 28px;
+  height: 28px;
+}
+
+.sub-item-actions-cell .action-icon {
+  filter: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.sub-item-actions-cell .action-btn:hover {
+  background-color: #f3f4f6;
+}
+
+.sub-item-actions-cell .action-btn:hover .action-icon {
+  opacity: 1;
+}
+
+/* Extra black action buttons beside sub-items */
+.sub-item-extra-actions {
+  display: flex;
+  gap: 1px;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  margin-left: 12px;
+}
+
+.sub-item-extra-actions::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 20px;
+  background-color: #D5D5D5;
+}
+
+.sub-item-extra-actions .action-btn {
+  width: 32px;
+  height: 32px;
+  padding: 6px;
+  border-radius: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sub-item-extra-actions .action-btn:hover {
+  background-color: #f3f4f6;
+}
+
+.sub-item-extra-actions .action-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  filter: none;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.sub-item-extra-actions .action-btn:hover .action-icon {
+  opacity: 1;
+}
+
+/* Remove the old partial line styles - no longer needed */
+.sub-items-bottom-line {
+  display: none;
+}
+
+/* Scrollbar Styling */
+.group-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.group-list::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.group-list::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.group-list::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

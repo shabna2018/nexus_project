@@ -68,116 +68,114 @@ const AddProfileModal = () => {
   };
 
   return (
-    <div className="modal-overlay">
-      <div className="modal-container">
+    <div className="addprofile-modal-overlay">
+      <div className="addprofile-modal-container">
         {/* Header */}
-        <div className="modal-header">
-          <div className="header-left">
-            <img src={accessProfileIcon} alt="Access Profile" className="access-profile-icon" />
-            <h2 className="modal-title">Add Profile</h2>
+        <div className="addprofile-modal-header">
+          <div className="addprofile-header-left">
+            <img src={accessProfileIcon} alt="Access Profile" className="addprofile-access-profile-icon" />
+            <h2 className="addprofile-modal-title">Add Profile</h2>
           </div>
-          <button onClick={() => navigate("/accessprofile")} className="close-button">
-  <img src={cancelIcon} alt="Close" className="close-icon" />
-</button>
-
+          <button onClick={() => navigate("/accessprofile")} className="addprofile-close-button">
+            <img src={cancelIcon} alt="Close" className="addprofile-close-icon" />
+          </button>
         </div>
 
         {/* Content */}
-        <div className="modal-content">
-          <div className="content-grid">
+        <div className="addprofile-modal-content">
+          <div className="addprofile-content-grid">
             {/* Profile Box */}
-            <div className="profile-box">
-              <h3 className="section-header">Profile</h3>
+            <div className="addprofile-profile-box">
+              <h3 className="addprofile-section-header">Profile</h3>
               
-              <div className="form-fields">
+              <div className="addprofile-form-fields">
                 {/* Horizontal Row: ID, Active, Profile */}
-                <div className="horizontal-field-row">
+                <div className="addprofile-horizontal-field-row">
                   {/* ID Field */}
-                  <div className="horizontal-field-item">
-                    <label className="field-label">ID</label>
+                  <div className="addprofile-horizontal-field-item">
+                    <label className="addprofile-field-label">ID</label>
                     
                     <input
                       type="text"
                       value={formData.id}
                       onChange={(e) => handleInputChange('id', e.target.value)}
-                      className="field-input"
+                      className="addprofile-field-input"
                       placeholder="1234"
                     />
                   </div>
 
                   {/* Active Checkbox */}
-                  <div className="horizontal-field-item">
-                    <label className="field-label">Active</label>
-                    <div className="checkbox-container">
+                  <div className="addprofile-horizontal-field-item">
+                    <label className="addprofile-field-label">Active</label>
+                    <div className="addprofile-checkbox-container">
                       <input
                         type="checkbox"
-                        id="active-checkbox"
+                        id="addprofile-active-checkbox"
                         checked={formData.active}
                         onChange={(e) => handleInputChange('active', e.target.checked)}
-                        className="checkbox-input"
+                        className="addprofile-checkbox-input"
                       />
-                      <label htmlFor="active-checkbox" className="checkbox-custom"></label>
+                      <label htmlFor="addprofile-active-checkbox" className="addprofile-checkbox-custom"></label>
                     </div>
                   </div>
 
                   {/* Profile Field */}
-                  <div className="horizontal-field-item">
-                    <label className="field-label">Profile</label>
+                  <div className="addprofile-horizontal-field-item">
+                    <label className="addprofile-field-label">Profile</label>
                     <input
                       type="text"
                       value={formData.profile}
                       onChange={(e) => handleInputChange('profile', e.target.value)}
-                      className="field-input"
+                      className="addprofile-field-input"
                     />
                   </div>
                 </div>
 
                 {/* Description Field - Separate Row */}
-                <div className="field-row">
-                  <label className="field-label description-label">Description</label>
+                <div className="addprofile-field-row">
+                  <label className="addprofile-field-label addprofile-description-label">Description</label>
                   <textarea
                     value={formData.description}
                     onChange={(e) => handleInputChange('description', e.target.value)}
-                    className="field-textarea"
+                    className="addprofile-field-textarea"
                   />
                 </div>
               </div>
             </div>
 
             {/* Select Category Box - Updated Structure */}
-            <div className="category-box">
+            <div className="addprofile-category-box">
               {/* Category Header with two sections */}
-              <div className="category-header">
-                <div className="category-header-section category-select-section">
+              <div className="addprofile-category-header">
+                <div className="addprofile-category-header-section addprofile-category-select-section">
                   Select
                 </div>
-                <div className="category-header-section category-title-section">
+                <div className="addprofile-category-header-section addprofile-category-title-section">
                   Category
                 </div>
               </div>
               
               {/* Category List */}
-              <div className="category-list">
+              <div className="addprofile-category-list">
                 {categories.map((category) => (
-                  <div key={category.id} className="category-item">
-                    <div className="category-checkbox-section">
-                      <div className="checkbox-container">
+                  <div key={category.id} className="addprofile-category-item">
+                    <div className="addprofile-category-checkbox-section">
+                      <div className="addprofile-checkbox-container">
                         <input
                           type="checkbox"
-                          id={`category-${category.id}`}
+                          id={`addprofile-category-${category.id}`}
                           checked={category.checked}
                           onChange={() => handleCategoryChange(category.id)}
-                          className="checkbox-input"
+                          className="addprofile-checkbox-input"
                         />
-                        <label htmlFor={`category-${category.id}`} className="checkbox-custom"></label>
+                        <label htmlFor={`addprofile-category-${category.id}`} className="addprofile-checkbox-custom"></label>
                       </div>
                     </div>
-                    <div className="category-name-section">
-                      <span className="category-name">{category.name}</span>
+                    <div className="addprofile-category-name-section">
+                      <span className="addprofile-category-name">{category.name}</span>
                     </div>
-                    <div className="category-remove-section">
-                       <img src={closeIcon} alt="Close" className="close-icon" />
-                      
+                    <div className="addprofile-category-remove-section">
+                       <img src={closeIcon} alt="Close" className="addprofile-close-icon" />
                     </div>
                   </div>
                 ))}
@@ -186,28 +184,28 @@ const AddProfileModal = () => {
           </div>
 
           {/* Footer Section */}
-          <div className="footer-section">
-            <div className="footer-info">
-              <div className="info-item">
-                <span className="info-label">Last Updated Date:</span>
-                <span className="info-value">09-Nov-2024</span>
+          <div className="addprofile-footer-section">
+            <div className="addprofile-footer-info">
+              <div className="addprofile-info-item">
+                <span className="addprofile-info-label">Last Updated Date:</span>
+                <span className="addprofile-info-value">09-Nov-2024</span>
               </div>
-              <div className="info-item">
-                <span className="info-label">Last Updated User:</span>
-                <span className="info-value">Ahmed Jaseel</span>
+              <div className="addprofile-info-item">
+                <span className="addprofile-info-label">Last Updated User:</span>
+                <span className="addprofile-info-value">Ahmed Jaseel</span>
               </div>
             </div>
-            <button onClick={handleAddGames} className="add-games-button">
+            <button onClick={handleAddGames} className="addprofile-add-games-button">
               Add Games
             </button>
           </div>
 
           {/* Action Buttons */}
-          <div className="action-buttons">
-            <button onClick={handleSave} className="save-button">
+          <div className="addprofile-action-buttons">
+            <button onClick={handleSave} className="addprofile-save-button">
               Save
             </button>
-            <button onClick={handleCancel} className="cancel-button">
+            <button onClick={handleCancel} className="addprofile-cancel-button">
               Cancel
             </button>
           </div>

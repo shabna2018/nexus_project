@@ -107,7 +107,27 @@ function Sidebar() {
                   <Link to="/combo-product" style={{ textDecoration: "none", color: "inherit" }}>
                     Combo Product
                   </Link>
+                </li>      {/* Separator line */}
+                <div className="submenu-separator"></div>
+                <li className={location.pathname === "/display-group" ? "active" : ""}>
+                  <Link
+                    to="/display-group"
+                    style={{ textDecoration: "none", color: "inherit" }}
+                  >
+                    Display Group
+                  </Link>
                 </li>
+                  {/* Separator line before Tax Category */}
+      <div className="submenu-separator"></div>
+
+      <li className={location.pathname === "/tax-category" ? "active" : ""}>
+        <Link
+          to="/tax-category"
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          Tax Category
+        </Link>
+      </li>
               </ul>
             </div>
           )}

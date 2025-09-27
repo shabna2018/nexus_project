@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./stock.css"; 
 import searchIcon from "../../components/assets/search.png";
 import logo from "../../components/assets/stock-icon.png";
+import { useNavigate } from "react-router-dom";
 
 const data = [
   { id: 1, ProductName: "Coffee", Barcode: "434567", Quantity: 20, BOM: "Pcs", status: "green" },
@@ -25,6 +26,7 @@ const data = [
 
 const StockTable = () => {
   const [searchTerm, setSearchTerm] = useState('');
+  const navigate = useNavigate();
 
   const [isModalOpen, setIsModalOpen] = useState(false); 
 
@@ -70,7 +72,7 @@ const StockTable = () => {
     <button className="top-btn red">Print</button>
     <button className="top-btn green">Excel</button>
     <button className="top-btn gray">Inventory Count Report</button>
-   <button className="top-btn blue" onClick={handleOpenQuickInventory}>
+   <button className="top-btn blue" onClick={() => navigate('/quickinventory')}>
   Quick Inventory
 </button>
 

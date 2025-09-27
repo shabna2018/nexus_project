@@ -30,10 +30,12 @@ import LedProductAdd from "./products/ledproduct/ledproductadd";
 import StickerProductAdd from "./products/stickerproduct/stickerproductadd";
 
 import InventoryStock from "./components/inventory/stock";
+import QuickInventory from "./components/inventory/quickinventory";
 import CoinProductForm from "./products/coinproduct/coinproductform";
 import CardProductForm from "./products/cardproduct/cardproductform";
 import TimeProductForm from "./products/timeproduct/timeproductform";
-
+import DisplayGroup from "./products/displaygroup/displaygroup"; 
+import DisplayGroupAdd from './products/displaygroup/displaygroupadd';
 
 
 import "./App.css";
@@ -76,6 +78,9 @@ function DashboardLayout() {
            <Route path="/userdetails" element={<UserDetails />} />
            <Route path="/userroleadd" element={<UserRoleAdd />} />
            <Route path="/stock" element={<InventoryStock />} />
+           <Route path="/quickinventory" element={<QuickInventory />} />
+           <Route path="/display-group" element={<DisplayGroup />} /> {/* ✅ Added DisplayGroup route */}
+            <Route path="/display-group-add" element={<DisplayGroupAdd />} />
           </Routes>
         </div>
       </div>
