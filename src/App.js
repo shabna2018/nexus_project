@@ -31,6 +31,7 @@ import StickerProductAdd from "./products/stickerproduct/stickerproductadd";
 
 import InventoryStock from "./components/inventory/stock";
 import QuickInventory from "./components/inventory/quickinventory";
+import AdjustInventory from "./components/inventory/adjustinventory";
 import CoinProductForm from "./products/coinproduct/coinproductform";
 import CardProductForm from "./products/cardproduct/cardproductform";
 import TimeProductForm from "./products/timeproduct/timeproductform";
@@ -38,6 +39,9 @@ import DisplayGroup from "./products/displaygroup/displaygroup";
 import DisplayGroupAdd from './products/displaygroup/displaygroupadd';
 import Membership from './components/membership/membership';
 import MembershipAdd from './components/membership/membershipadd';
+import Reports from './components/Reports/reports';
+
+
 import "./App.css";
 import { Import } from "lucide-react";
 
@@ -79,10 +83,13 @@ function DashboardLayout() {
            <Route path="/userroleadd" element={<UserRoleAdd />} />
            <Route path="/stock" element={<InventoryStock />} />
            <Route path="/quickinventory" element={<QuickInventory />} />
+           <Route path="/adjustinventory" element={<AdjustInventory />} /> 
            <Route path="/display-group" element={<DisplayGroup />} /> {/* ✅ Added DisplayGroup route */}
             <Route path="/display-group-add" element={<DisplayGroupAdd />} />
             <Route path="/membership" element={<Membership />} />
             <Route path="/membershipadd" element={<MembershipAdd />} />
+            <Route path="/reports" element={<Reports />} />
+           
           </Routes>
         </div>
       </div>

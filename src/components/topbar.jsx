@@ -9,6 +9,7 @@ import dropdownIcon from "./assets/Group 39.png";
 import profileImage from "./assets/Ellipse 3.png";
 import helpIcon from "./assets/help-icon.png"; // Add help icon
 import backIcon from "./assets/back-icon.png"; // Add back arrow icon
+import reportIcon from "./assets/reportIcon.png"; 
 
 function TopBar() {
   const location = useLocation();
@@ -72,23 +73,31 @@ function TopBar() {
         <img src={backIcon} alt="Back" className="back-icon" />
 
         {breadcrumbs.map((crumb, index) => (
-          <React.Fragment key={index}>
-            <span
-              className={
-                index === breadcrumbs.length - 1 ? "active" : "inactive"
-              }
-            >
-              {crumb}
-            </span>
-            {index < breadcrumbs.length - 1 && (
-              <img
-                src={breadcrumbIcon}
-                alt="Breadcrumb Icon"
-                className="breadcrumb-icon"
-              />
-            )}
-          </React.Fragment>
-        ))}
+  <React.Fragment key={index}>
+    <span className={index === breadcrumbs.length - 1 ? "active" : "inactive"}>
+      {/* Show report icon only for the last breadcrumb and if it’s "Reports" */}
+      {index === breadcrumbs.length - 1 && crumb === "Reports" && (
+        <img
+          src={reportIcon}
+          alt="Report"
+          className="breadcrumb-report-icon"
+          style={{ marginRight: "5px", width: "16px", height: "16px", verticalAlign: "middle" }}
+        />
+      )}
+      {crumb}
+    </span>
+
+    {/* Add separator only between breadcrumbs */}
+    {index < breadcrumbs.length - 1 && (
+      <img
+        src={breadcrumbIcon}
+        alt="Breadcrumb Icon"
+        className="breadcrumb-icon"
+      />
+    )}
+  </React.Fragment>
+))}
+
       </div>
     </div>
   );

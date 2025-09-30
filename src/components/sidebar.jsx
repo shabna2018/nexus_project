@@ -192,9 +192,11 @@ function Sidebar() {
             </div>
           )}
 
-          <li>
+          <li className={location.pathname === "/reports" ? "active" : ""}>
+                  <Link to="/reports" style={{ textDecoration: "none", color: "inherit" }}>
             <img src={reportIcon} alt="" />
             Reports
+            </Link>
           </li>
           <li>
             <img src={balanceIcon} alt="" />

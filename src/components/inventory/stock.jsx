@@ -76,7 +76,7 @@ const StockTable = () => {
   Quick Inventory
 </button>
 
-    <button className="top-btn orange">Adjust Inventory</button>
+    <button className="top-btn orange" onClick={() => navigate('/adjustinventory')}> Adjust Inventory</button>
   </div>
    <div className="product-count">
     <span className="count">Product count: 8</span>

@@ -3,50 +3,53 @@ import "./quickinventory.css";
 import cancelIcon from '../../components/assets/iconoir_cancel.png';
 import { useNavigate } from "react-router-dom";
 
-
-  
 const QuickInventory = ({ onClose }) => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
+  
+  const handleClose = () => {
+    navigate("/stock"); // route to your UserList page
+  };
 
-    const handleClose = () => {
-        navigate("/stock"); // route to your UserList page
-      };
   return (
-    <div className="popup-overlay">
-      <div className="popup-content">
+    <div className="quick-popup-overlay">
+      <div className="quick-popup-content">
         {/* Header */}
-        <div className="popup-header">
-          <h2 className="popup-title">Quick Inventory</h2>
-          <button className="popup-close" onClick={handleClose}>
-            <img src={cancelIcon} alt="Close"  />
+        <div className="quick-popup-header">
+          <h2 className="quick-popup-title">Quick Inventory</h2>
+          <button className="quick-popup-close" onClick={handleClose}>
+            <img src={cancelIcon} alt="Close" />
           </button>
         </div>
+
         {/* Content */}
-        <div className="popup-body">
-          <div className="content-border">
+        <div className="quick-popup-body">
+          <div className="quick-content-border">
             {/* Product Details */}
-            <div className="content-header">
+            <div className="quick-content-header">
               <p>Product : Pepsi 330 ML</p>
               <p>Barcode : 2323845</p>
             </div>
+
             {/* Body */}
-            <div className="content-body">
-              <div className="quantity-section">
+            <div className="quick-content-body">
+              <div className="quick-quantity-section">
                 <label>Received Quantity</label>
-                <input type="number" value="12" readOnly className="quantity-input" />
+                <input type="number" value="12" readOnly className="quick-quantity-input" />
               </div>
+
               {/* Stock Info */}
-              <div className="stock-section">
+              <div className="quick-stock-section">
                 <p>Current Counter Stock : 100</p>
                 <p>Adjusted Counter Stock : 100</p>
               </div>
             </div>
           </div>
         </div>
+
         {/* Footer */}
-        <div className="popup-buttons">
-          <button className="btn-save">Save</button>
-          <button className="btn-close" onClick={onClose}>
+        <div className="quick-popup-buttons">
+          <button className="quick-btn-save">Save</button>
+          <button className="quick-btn-close" onClick={onClose}>
             Close
           </button>
         </div>

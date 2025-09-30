@@ -124,3 +124,41 @@
   width: 14px;
   height: 14px;
 }
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px 32px;
+  background-color: #F2F7FA;
+  border-bottom: 1px solid #E0E4EB;
+}
+
+.back-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-right: 4px;
+}
+
+.breadcrumb .inactive {
+  color: #868DA6;
+}
+
+.breadcrumb .active {
+  color: black;
+  font-weight: 500;
+  
+}
+
+.breadcrumb-icon {
+  width: 14px;
+  height: 14px;
+}
+.breadcrumb-report-icon {
+  margin-right: 4px;
+  width: 27px;
+  height: 27px;
+  vertical-align: middle;
+}
