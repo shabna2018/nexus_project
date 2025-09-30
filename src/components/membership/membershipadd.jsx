@@ -292,7 +292,7 @@ const MembershipSetup = ({ isOpen, onClose }) => {
           </div>
 
           {/* Action Buttons */}
-          <div className="action-buttons">
+          <div className="action-buttons-mem">
             <button className="btn btn-save">Save</button>
             <button className="btn btn-edit">Edit</button>
             <button className="btn btn-close" onClick={onClose}>Close</button>

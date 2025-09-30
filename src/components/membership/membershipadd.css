@@ -242,7 +242,7 @@
   }
   
   /* Action Buttons */
-  .action-buttons {
+  .action-buttons-mem {
     display: flex;
     justify-content: flex-end;
     gap: 12px;
