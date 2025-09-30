@@ -40,6 +40,7 @@ import DisplayGroupAdd from './products/displaygroup/displaygroupadd';
 import Membership from './components/membership/membership';
 import MembershipAdd from './components/membership/membershipadd';
 import Reports from './components/Reports/reports';
+import CheckBalance from './components/Reports/reports';
 
 
 import "./App.css";
