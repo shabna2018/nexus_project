@@ -90,6 +90,8 @@ function DashboardLayout() {
             <Route path="/membership" element={<Membership />} />
             <Route path="/membershipadd" element={<MembershipAdd />} />
             <Route path="/reports" element={<Reports />} />
+                        <Route path="/check-balance" element={<CheckBalance />} />
+
            
           </Routes>
         </div>
