@@ -198,10 +198,16 @@ function Sidebar() {
             Reports
             </Link>
           </li>
-          <li>
-            <img src={balanceIcon} alt="" />
-            Check Balance
+           <li className={location.pathname === "/check-balance" ? "active" : ""}>
+            <Link
+              to="/check-balance"
+              style={{ textDecoration: "none", color: "inherit", display: "flex", alignItems: "center" }}
+            >
+              <img src={balanceIcon} alt="" />
+              Check Balance
+            </Link>
           </li>
+
 
           {/* Settings menu with submenu */}
           <li 
