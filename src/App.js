@@ -40,6 +40,7 @@ import DisplayGroupAdd from './products/displaygroup/displaygroupadd';
 import Membership from './components/membership/membership';
 import MembershipAdd from './components/membership/membershipadd';
 import Reports from './components/Reports/reports';
+import CheckBalance from './checkbalance/checkbalance';
 
 
 import "./App.css";
@@ -89,6 +90,8 @@ function DashboardLayout() {
             <Route path="/membership" element={<Membership />} />
             <Route path="/membershipadd" element={<MembershipAdd />} />
             <Route path="/reports" element={<Reports />} />
+                        <Route path="/check-balance" element={<CheckBalance />} />
+
            
           </Routes>
         </div>
