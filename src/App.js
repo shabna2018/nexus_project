@@ -28,7 +28,7 @@ import ComboProduct from "./products/comboproduct/comboproduct";
 import ComboProductAdd from "./products/comboproduct/comboproductadd";
 import LedProductAdd from "./products/ledproduct/ledproductadd";
 import StickerProductAdd from "./products/stickerproduct/stickerproductadd";
-
+import TaxCategory from "./products/taxcategory/taxcategory";
 import InventoryStock from "./components/inventory/stock";
 import QuickInventory from "./components/inventory/quickinventory";
 import AdjustInventory from "./components/inventory/adjustinventory";
@@ -67,7 +67,7 @@ function DashboardLayout() {
             <Route path="/led-product" element={<LedProduct />} />
             <Route path="/led-product-add" element={<LedProductAdd/>} />
             <Route path="/sticker-product-add" element={<StickerProductAdd/>} />
-        
+            <Route path="/tax-category" element={<TaxCategory/>} />
             <Route path="/sticker-product" element={<StickerProduct/>} />
             <Route path="/combo-product" element={<ComboProduct/>} />
             <Route path="/combo-product-add" element={<ComboProductAdd />} />
