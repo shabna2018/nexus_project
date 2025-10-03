@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './checkbalance.css';
+import profileIcon from '../components/assets/profile-icon.png';
+import searchIcon from '../components/assets/search-check.png';
 
 export default function CheckBalance() {
   const [cardNumber, setCardNumber] = useState('FGH06781');
@@ -24,152 +26,152 @@ export default function CheckBalance() {
   });
 
   return (
-    <div className="check-balance-container">
+    <div className="check-balance-container-check">
       {/* Search Section - Outside main wrapper */}
-      <div className="search-section">
+      <div className="search-section-check">
         <label>Card Number</label>
         <input 
           type="text" 
           value={cardNumber}
           onChange={(e) => setCardNumber(e.target.value)}
-          className="card-input"
+          className="card-input-check"
         />
-        <button className="search-btn">🔍 Search</button>
-        <div className="action-buttons">
-          <button className="refresh-btn">Refresh</button>
-          <button className="search-card-btn">Search Card</button>
+        <button className="search-btn-check">
+          <img src={searchIcon} alt="Search" className="search-icon-check" />
+          Search
+        </button>
+
+        <div className="action-buttons-check">
+          <button className="refresh-btn-check">Refresh</button>
+          <button className="search-card-btn-check">Search Card</button>
         </div>
       </div>
 
       {/* Main Container Wrapper */}
-      <div className="main-container-wrapper">
+      <div className="main-container-wrapper-check">
         {/* Main Content */}
-        <div className="content-wrapper">
+        <div className="content-wrapper-check">
           {/* Top Section */}
-          <div className="top-section">
+          <div className="top-section-check">
             {/* Left Section */}
-            <div className="left-section">
-              <div className="user-status-outer-wrapper">
-                <div className="user-status-wrapper">
-                  <div className="user-name-container">
+            <div className="left-section-check">
+              <div className="user-status-outer-wrapper-check">
+                <div className="user-status-wrapper-check">
+                  <div className="user-name-container-check">
                     <h3>{userData.name}</h3>
                   </div>
-                  <div className="status-container">
-                    <span className="status-badge">
-                      <span className="status-dot"></span>
-                      Status: {userData.status}
+                  <div className="status-container-check">
+                    <span className="status-badge-check">
+                      Status: <span className="status-dot-check"></span> {userData.status}
                     </span>
                   </div>
                 </div>
               </div>
 
               {/* Stats and Info Combined Container */}
-              <div className="stats-info-container">
-                <div className="stats-grid">
-                  <div className="stat-item">
-                    <div className="stat-label">Cash</div>
-                    <div className="stat-value">{userData.cash}</div>
+              <div className="stats-info-container-check">
+                <div className="stats-grid-check">
+                  <div className="stat-item-check">
+                    <div className="stat-label-check">Cash</div>
+                    <div className="stat-value-check">{userData.cash}</div>
                   </div>
-                  <div className="stat-item">
-                    <div className="stat-label">Bonus</div>
-                    <div className="stat-value">{userData.bonus}</div>
+                  <div className="stat-item-check">
+                    <div className="stat-label-check">Bonus</div>
+                    <div className="stat-value-check">{userData.bonus}</div>
                   </div>
-                  <div className="stat-item">
-                    <div className="stat-label">Coin</div>
-                    <div className="stat-value">{userData.coin}</div>
+                  <div className="stat-item-check">
+                    <div className="stat-label-check">Coin</div>
+                    <div className="stat-value-check">{userData.coin}</div>
                   </div>
-                  <div className="stat-item">
-                    <div className="stat-label">Time</div>
-                    <div className="stat-value">{userData.time}</div>
+                  <div className="stat-item-check">
+                    <div className="stat-label-check">Time</div>
+                    <div className="stat-value-check">{userData.time}</div>
                   </div>
                 </div>
 
-                <div className="horizontal-separator"></div>
+                <div className="horizontal-separator-check"></div>
 
-                <div className="info-grid">
-                  <div className="info-item">
-                    <div className="info-label">Membership/promo</div>
-                    <div className="info-value">{userData.membership}</div>
+                <div className="info-grid-check">
+                  <div className="info-item-check">
+                    <div className="info-label-check">Membership/promo</div>
+                    <div className="info-value-check">{userData.membership}</div>
                   </div>
-                  <div className="info-item">
-                    <div className="info-label">Access Profile</div>
-                    <div className="info-value">{userData.accessProfile}</div>
+                  <div className="info-item-check">
+                    <div className="info-label-check">Access Profile</div>
+                    <div className="info-value-check">{userData.accessProfile}</div>
                   </div>
-                  <div className="info-item">
-                    <div className="info-label">Discount</div>
-                    <div className="info-value">{userData.discount}</div>
+                  <div className="info-item-check">
+                    <div className="info-label-check">Discount</div>
+                    <div className="info-value-check">{userData.discount}</div>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Right Section */}
-            <div className="right-section">
-              <div className="avatar-placeholder">
-                <div className="avatar-circle">
-                  <svg width="60" height="60" viewBox="0 0 80 80">
-                    <circle cx="40" cy="30" r="15" fill="#d1d5db"/>
-                    <path d="M 15 70 Q 15 50 40 50 Q 65 50 65 70" fill="#d1d5db"/>
-                  </svg>
+            <div className="right-section-check">
+              <div className="avatar-placeholder-check">
+                <div className="avatar-circle-check">
+                  <img src={profileIcon} alt="Profile Icon" />
                 </div>
               </div>
             </div>
           </div>
 
           {/* Bottom Section - Full Width */}
-          <div className="bottom-section">
+          <div className="bottom-section-check">
             {/* Sections Outer Container */}
-            <div className="sections-outer-container">
-              <div className="sections-grid-container">
+            <div className="sections-outer-container-check">
+              <div className="sections-grid-container-check">
                 {/* General Status */}
-                <div className="section-card">
-                  <div className="section-header">General Status</div>
-                  <div className="section-content">
-                    <div className="detail-row">
-                      <span className="detail-label">Card Holder Since</span>
-                      <span className="detail-value">{userData.cardHolderSince}</span>
+                <div className="section-card-check">
+                  <div className="section-header-check">General Status</div>
+                  <div className="section-content-check">
+                    <div className="detail-row-check">
+                      <span className="detail-label-check">Card Holder Since</span>
+                      <span className="detail-value-check">{userData.cardHolderSince}</span>
                     </div>
-                    <div className="detail-row">
-                      <span className="detail-label">Total Paid in</span>
-                      <span className="detail-value">{userData.totalPaidIn}</span>
+                    <div className="detail-row-check">
+                      <span className="detail-label-check">Total Paid in</span>
+                      <span className="detail-value-check">{userData.totalPaidIn}</span>
                     </div>
-                    <div className="detail-row">
-                      <span className="detail-label">Today's Paid in</span>
-                      <span className="detail-value">{userData.todaysPaidIn}</span>
+                    <div className="detail-row-check">
+                      <span className="detail-label-check">Today's Paid in</span>
+                      <span className="detail-value-check">{userData.todaysPaidIn}</span>
                     </div>
                   </div>
                 </div>
 
                 {/* Time Play */}
-                <div className="section-card time-play-card">
-                  <div className="section-header">Time Play</div>
-                  <div className="section-content">
-                    <div className="detail-row">
-                      <span className="detail-label">Start Time</span>
-                      <span className="detail-value">{userData.startTime}</span>
+                <div className="section-card-check time-play-card-check">
+                  <div className="section-header-check">Time Play</div>
+                  <div className="section-content-check">
+                    <div className="detail-row-check">
+                      <span className="detail-label-check">Start Time</span>
+                      <span className="detail-value-check">{userData.startTime}</span>
                     </div>
-                    <div className="detail-row">
-                      <span className="detail-label">Duration</span>
-                      <span className="detail-value">{userData.duration}</span>
+                    <div className="detail-row-check">
+                      <span className="detail-label-check">Duration</span>
+                      <span className="detail-value-check">{userData.duration}</span>
                     </div>
-                    <div className="detail-row">
-                      <span className="detail-label">End Time</span>
-                      <span className="detail-value">{userData.endTime}</span>
+                    <div className="detail-row-check">
+                      <span className="detail-label-check">End Time</span>
+                      <span className="detail-value-check">{userData.endTime}</span>
                     </div>
                   </div>
                 </div>
 
                 {/* Account */}
-                <div className="section-card account-section">
-                  <div className="section-header">Account</div>
-                  <div className="account-content-inline">
-                    <div className="account-row">
-                      <span className="account-label">Activation</span>
-                      <span className="account-value">{userData.activation}</span>
+                <div className="section-card-check account-section-check">
+                  <div className="section-header-check">Account</div>
+                  <div className="account-content-inline-check">
+                    <div className="account-row-check">
+                      <span className="account-label-check">Activation</span>
+                      <span className="account-value-check">{userData.activation}</span>
                     </div>
-                    <div className="account-row">
-                      <span className="account-label">Expirition</span>
-                      <span className="account-value">{userData.expirition}</span>
+                    <div className="account-row-check">
+                      <span className="account-label-check">Expirition</span>
+                      <span className="account-value-check">{userData.expirition}</span>
                     </div>
                   </div>
                 </div>
@@ -177,7 +179,10 @@ export default function CheckBalance() {
             </div>
 
             {/* View Transaction Button */}
-            <button className="view-transaction-btn">View Transaction</button>
+            <div className="transaction-separator-check"></div>
+            <div className="view-transaction-wrapper-check">
+              <button className="view-transaction-btn-check">View Transaction</button>
+            </div>
           </div>
         </div>
       </div>
