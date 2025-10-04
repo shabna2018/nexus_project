@@ -9,7 +9,7 @@
   }
   
   /* ------------------- Section Header ------------------- */
-  .membership-section-header {
+  .membership-section-headers {
     display: flex;
     align-items: center;
     background-color: #f2f7fa;

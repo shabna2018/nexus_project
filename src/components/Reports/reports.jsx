@@ -1,6 +1,6 @@
 import React from "react";
 import "./reports.css"; // Import the CSS file for styling
-
+import { Link } from "react-router-dom";
 const reportCards = [
   {
     title: "Revenue Reports",
@@ -70,7 +70,14 @@ const Reports = () => {
         <div className="reports-grid">
           {reportCards.map((card, idx) => (
             <div className="report-card" key={idx}>
-              <div className="report-card__header">{card.title}</div>
+             <div className="report-card__header">
+  {card.title === "Game Reports" ? (
+    <Link to="/game-reports" className="card-link">{card.title}</Link>
+  ) : (
+    card.title
+  )}
+</div>
+
               <div className="report-card__body">
                 <ul>
                   {card.items.map((item, i) => (

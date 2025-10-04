@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "./membership.css";
-import { useNavigate } from "react-router-dom";
+import MembershipSetup from "./membershipadd"; // Import the modal component
 
 import searchIcon from "../../components/assets/search.png";
-import membershipIcon from "../../components/assets/membership.png"; // Update icon path
+import membershipIcon from "../../components/assets/membership.png";
 
-// Sample membership data - Updated to match the image
+// Sample membership data
 const data = Array.from({ length: 15 }, (_, index) => ({
-  select: index % 3 === 0, // Some rows selected
+  select: index % 3 === 0,
   id: 20 + index,
   membership: "Gold Member",
   description: "Valid for VIP Customers Only",
@@ -15,7 +15,7 @@ const data = Array.from({ length: 15 }, (_, index) => ({
   membershipType: index % 4 === 0 ? "Auto Earned Based Program" : 
                   index % 4 === 1 ? "Purchase Based Program" :
                   index % 4 === 2 ? "Game Played Earned Based Program" : 
-                  "Season Pass",       // Added missing field
+                  "Season Pass",
   lastUpdatedDate: "09-Dec-2024",
   lastUpdatedUser: "Mubin"
 }));
@@ -32,23 +32,20 @@ const HeaderCell = ({ label }) => (
 
 const MembershipScreen = () => {
   const [membershipFilter, setMembershipFilter] = useState("");
-  const navigate = useNavigate();
-
+  const [isModalOpen, setIsModalOpen] = useState(false); // Add state for modal
 
   return (
     <div className="membership-table-wrapper">
-      {/* ---------- Section Header ---------- */}
-      <div className="membership-section-header">
+      {/* Section Header */}
+      <div className="membership-section-headers">
         <div className="membership-section-title-container">
           <img src={membershipIcon} alt="Membership Icon" className="membership-section-icon" /> 
           <h2 className="membership-section-title">Membership</h2>
-
-          <div className="membership-checkbox-container">
-          </div>
+          <div className="membership-checkbox-container"></div>
         </div>
       </div>
 
-      {/* ---------- Action Row ---------- */}
+      {/* Action Row */}
       <div className="membership-header-actions">
         {/* Search box */}
         <div className="membership-search-container2">
@@ -62,23 +59,23 @@ const MembershipScreen = () => {
           />
         </div>
 
-        {/* Update + Add + Refresh */}
+        {/* Action Buttons */}
         <div className="membership-action-buttons">
           <button
             className="membership-btn-add"
-            onClick={() => navigate("/membershipadd")}
+            onClick={() => setIsModalOpen(true)} // Open modal instead of navigate
           >
             Add
           </button>
           <button 
             className="membership-btn-add"
-            onClick={() => navigate("/membershipadd")}
+            onClick={() => setIsModalOpen(true)} // Open modal
           >
             Save
           </button>
           <button className="membership-btn-refresh">
             Refresh
-            </button>
+          </button>
         </div>
       </div>
 
@@ -128,6 +125,12 @@ const MembershipScreen = () => {
           </tbody>
         </table>
       </div>
+
+      {/* Membership Modal */}
+      <MembershipSetup 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </div>
   );
 };

@@ -7,9 +7,11 @@ import breadcrumbIcon from "./assets/Group 1000003826.png";
 import notificationIcon from "./assets/Group 418.png";
 import dropdownIcon from "./assets/Group 39.png";
 import profileImage from "./assets/Ellipse 3.png";
-import helpIcon from "./assets/help-icon.png"; // Add help icon
-import backIcon from "./assets/back-icon.png"; // Add back arrow icon
-import reportIcon from "./assets/reportIcon.png"; 
+import helpIcon from "./assets/help-icon.png";
+import backIcon from "./assets/back-icon.png";
+import reportIcon from "./assets/reportIcon.png";
+import walletCheckIcon from "./assets/wallet-check.png"; // ✅ Wallet icon
+import { Check } from "lucide-react";
 
 function TopBar() {
   const location = useLocation();
@@ -18,7 +20,6 @@ function TopBar() {
   const breadcrumbMap = {
     "/location-table": ["Settings", "Location Table"],
     "/code-development": ["Settings", "Code & Development"],
-
     "/add-location": ["Settings", "Location Table", "Location info"],
     "/edit-location": ["Settings", "Location Table", "Edit Location"],
     "/card-product": ["Products", "Card Product"],
@@ -26,10 +27,10 @@ function TopBar() {
     "/time-product": ["Products", "Time Product"],
     "/item-product": ["Products", "Item Product"],
     "/led-product": ["Products", "LED Product"],
-    "/sticker-product": ["Products", "sticker Product"],
-    "/combo-product": ["Products", "combo Product"],
-    "/game-Cat": ["Products", "combo Product"],
-
+    "/sticker-product": ["Products", "Sticker Product"],
+    "/combo-product": ["Products", "Combo Product"],
+    "/game-Cat": ["Products", "Combo Product"],
+    "/check-balance": ["Check Balance"], // ✅ Wallet breadcrumb
     // Add more routes as needed
   };
 
@@ -38,14 +39,12 @@ function TopBar() {
 
   return (
     <div className="topbar-container">
-      {/* -------- Top Section (Help + Notification + Profile + Name + Dropdown) -------- */}
+      {/* -------- Top Section -------- */}
       <div className="topbar-main">
-        <div className="topbar-left">
-          {/* you can keep logo or breadcrumb trigger here later */}
-        </div>
+        <div className="topbar-left"></div>
 
         <div className="topbar-right">
-          {/* ✅ Help section moved here */}
+          {/* Help */}
           <div className="help-section">
             <img src={helpIcon} alt="Help" className="help-icon" />
             <span className="help-text">Help</span>
@@ -68,36 +67,49 @@ function TopBar() {
         </div>
       </div>
 
-      {/* -------- Bottom Section (Back Arrow + Breadcrumbs) -------- */}
+      {/* -------- Breadcrumb Section -------- */}
       <div className="breadcrumb">
         <img src={backIcon} alt="Back" className="back-icon" />
 
         {breadcrumbs.map((crumb, index) => (
-  <React.Fragment key={index}>
-    <span className={index === breadcrumbs.length - 1 ? "active" : "inactive"}>
-      {/* Show report icon only for the last breadcrumb and if it’s "Reports" */}
-      {index === breadcrumbs.length - 1 && crumb === "Reports" && (
-        <img
-          src={reportIcon}
-          alt="Report"
-          className="breadcrumb-report-icon"
-          style={{ marginRight: "5px", width: "16px", height: "16px", verticalAlign: "middle" }}
-        />
-      )}
-      {crumb}
-    </span>
+          <React.Fragment key={index}>
+            <span
+              className={index === breadcrumbs.length - 1 ? "active" : "inactive"}
+              style={{ display: "flex", alignItems: "center", gap: "5px" }} // ✅ Align icon + text
+            >
+              {/* Show report icon */}
+              {index === breadcrumbs.length - 1 && crumb === "Reports" && (
+                <img
+                  src={reportIcon}
+                  alt="Report"
+                  className="breadcrumb-report-icon"
+                  style={{ width: "16px", height: "16px" }}
+                />
+              )}
 
-    {/* Add separator only between breadcrumbs */}
-    {index < breadcrumbs.length - 1 && (
-      <img
-        src={breadcrumbIcon}
-        alt="Breadcrumb Icon"
-        className="breadcrumb-icon"
-      />
-    )}
-  </React.Fragment>
-))}
+              {/* Show wallet-check icon */}
+              {index === breadcrumbs.length - 1 && crumb === "Check Balance" && (
+                <img
+                  src={walletCheckIcon}
+                  alt="Wallet Check"
+                  className="breadcrumb-wallet-icon"
+                  style={{ width: "22px", height: "24px" }}
+                />
+              )}
 
+              {crumb}
+            </span>
+
+            {/* Separator */}
+            {index < breadcrumbs.length - 1 && (
+              <img
+                src={breadcrumbIcon}
+                alt="Breadcrumb Icon"
+                className="breadcrumb-icon"
+              />
+            )}
+          </React.Fragment>
+        ))}
       </div>
     </div>
   );
