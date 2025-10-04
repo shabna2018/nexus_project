@@ -63,7 +63,8 @@ const AccessProfile = () => {
     }
   ]);
 
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
+
   const toggleActive = (id) => {
     setProfileData(prevData =>
       prevData.map(item =>
@@ -71,50 +72,50 @@ const AccessProfile = () => {
       )
     );
   };
+
   const handleAddClick = () => {
-    navigate('/addprofile');  // <-- This will navigate to AddProfile route
+    navigate('/addprofile');
   };
 
   return (
     <div className="access-profile-wrapper">
-      <div className="header">
-        <div className="header-left">
+      <div className="access-profile-header">
+        <div className="access-profile-header-left">
           <img src={accessProfileIcon} alt="Access Profile" className="access-profile-icon" />
-          <h2 className="header-title">Access Profile</h2>
+          <h2 className="access-profile-header-title">Access Profile</h2>
         </div>
-        <div className="header-buttons">
-          <button className="btn btn-save">Save</button>
-          <button className="btn btn-add" onClick={handleAddClick}>Add</button>
-          <button className="btn btn-delete">Delete</button>
+        <div className="access-profile-header-buttons">
+          <button className="access-profile-btn access-profile-btn-save">Save</button>
+          <button className="access-profile-btn access-profile-btn-add" onClick={handleAddClick}>Add</button>
+          <button className="access-profile-btn access-profile-btn-delete">Delete</button>
         </div>
       </div>
-      
-      <div className="table-container">
-        <table className="profile-table">
+      <div className="access-profile-table-container">
+        <table className="access-profile-table">
           <thead>
             <tr>
-              <th className="th first-column">ID</th>
-              <th className="th">Profile</th>
-              <th className="th active-column">Active</th> 
-              <th className="th">Created</th>
-              <th className="th last-column">Updated</th>
+              <th className="access-profile-th access-profile-first-column">ID</th>
+              <th className="access-profile-th">Profile</th>
+              <th className="access-profile-th access-profile-active-column">Active</th>
+              <th className="access-profile-th">Created</th>
+              <th className="access-profile-th access-profile-last-column">Updated</th>
             </tr>
           </thead>
           <tbody>
             {profileData.map((row, index) => (
-              <tr key={row.id} className={index % 2 === 0 ? 'even-row' : 'odd-row'}>
-                <td className="td first-column">{row.id}</td>
-                <td className="td">{row.profile}</td>
-                <td className="td active-column">
+              <tr key={row.id} className={index % 2 === 0 ? 'access-profile-even-row' : 'access-profile-odd-row'}>
+                <td className="access-profile-td access-profile-first-column">{row.id}</td>
+                <td className="access-profile-td">{row.profile}</td>
+                <td className="access-profile-td access-profile-active-column">
                   <input
                     type="checkbox"
                     checked={row.active}
                     onChange={() => toggleActive(row.id)}
-                    className="custom-checkbox"
+                    className="access-profile-custom-checkbox"
                   />
                 </td>
-                <td className="td">{row.created}</td>
-                <td className="td last-column">{row.updated}</td>
+                <td className="access-profile-td">{row.created}</td>
+                <td className="access-profile-td access-profile-last-column">{row.updated}</td>
               </tr>
             ))}
           </tbody>
