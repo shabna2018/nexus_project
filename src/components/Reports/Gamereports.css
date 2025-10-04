@@ -21,9 +21,6 @@ body {
   height: 30px;
   width: auto;
 }
-
-
-
 .header-left {
   position: absolute; 
   left: 20px;         
@@ -33,16 +30,12 @@ body {
   margin-left: 1%;
 }
 
-
-
-
-
 .header-filters {
   display: flex;
   align-items: center;
   gap: 20px;
   background: #2e2148; 
-  padding: 12px 55px;
+  padding: 12px 350px;
   color: white;
   
 }
@@ -526,7 +519,7 @@ body {
   /* Buttons smaller */
   .header-actions {
     flex-wrap: wrap;
-    gap: 4px;
+    gap: 10px;
     justify-content: flex-start;
   }
 
