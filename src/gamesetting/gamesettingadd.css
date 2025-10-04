@@ -1,5 +1,5 @@
 /* Popup Overlay */
-.popup-overlay {
+.gameSettings-popup-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -14,11 +14,11 @@
 }
 
 /* Main Popup Container */
-.popup-container {
+.gameSettings-popup-container {
   background: white;
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  width: 90%;
+  width: 80%;
   max-width: 1100px;
   max-height: 90vh;
   overflow: hidden;
@@ -27,7 +27,7 @@
 }
 
 /* Header */
-.popup-header {
+.gameSettings-popup-header {
   background: white;
   padding: 5px 15px;
   display: flex;
@@ -36,28 +36,30 @@
   border-radius: 8px 8px 0 0;
 }
 
-.header-content {
+.gameSettings-header-content {
   display: flex;
   align-items: center;
-  gap: 0px;
+  gap: 10px;
 }
-.item-add {
+
+.gameSettings-item-add {
   width: 90%;
   height: 80%;
   object-fit: contain;
 }
-.popup-header .item-add-folder-icon-item {
+
+.gameSettings-popup-header .gameSettings-item-add-folder-icon-item {
   width: 30px;
   height: 30px;
 }
-.popup-header .header-title {
+
+.gameSettings-popup-header .gameSettings-header-title {
   font-size: 20px;
   font-weight: 600;
   color: #1C212D !important;
 }
 
-
-.item-add-close-button-item {
+.gameSettings-item-add-close-button-item {
   background: none;
   border: none;
   cursor: pointer;
@@ -66,18 +68,18 @@
   transition: background-color 0.2s;
 }
 
-.item-add-close-button-item:hover {
+.gameSettings-item-add-close-button-item:hover {
   background: rgba(255, 255, 255, 0.1);
 }
 
-.item-add-close-icon-item {
+.gameSettings-item-add-close-icon-item {
   width: 16px;
   height: 16px;
   filter: brightness(0) invert(1);
 }
 
 /* Popup Body */
-.popup-body {
+.gameSettings-popup-body {
   flex: 1;
   overflow-y: auto;
   padding: 15px;
@@ -86,7 +88,7 @@
 }
 
 /* Settings Container */
-.settings-container {
+.gameSettings-settings-container {
   background: white;
   border: 1px solid #e2e8f0;
   border-radius: 6px;
@@ -94,28 +96,55 @@
 }
 
 /* Settings Header */
-.settings-header {
+.gameSettings-settings-header {
   background: #2E2343;
   color: white;
   padding: 12px 10px;
   border-radius: 13px 13px 0 0;
 }
 
-.settings-header h3 {
+.gameSettings-settings-header h3 {
   margin: 0;
   font-size: 14px;
   font-weight: 600;
 }
 
 /* Settings Content */
-.settings-content {
+.gameSettings-settings-content {
   padding: 0px 15px;
 }
 
-/* Checkbox Row */
+/* Checkbox Section */
+.gameSettings-timeform-checkbox-section {
+  margin-bottom: 15px;
+  padding: 10px 0;
+}
+
+.gameSettings-timeform-checkbox-grid {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.gameSettings-timeform-checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.gameSettings-timeform-checkbox {
+  width: 16px;
+  height: 16px;
+}
+
+.gameSettings-timeform-checkbox-label {
+  font-size: 10px;
+  font-weight: 500;
+  color: #4a5568;
+}
 
 /* Form Rows */
-.form-row {
+.gameSettings-form-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
@@ -123,7 +152,7 @@
   align-items: end;
 }
 
-.price-row {
+.gameSettings-price-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0px;
@@ -131,12 +160,12 @@
   align-items: end;
 }
 
-.led-row {
+.gameSettings-led-row {
   grid-template-columns: 1fr 3fr;
 }
 
 /* Form Groups */
-.form-group {
+.gameSettings-form-group {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -144,7 +173,7 @@
   min-height: 40px;
 }
 
-.form-label {
+.gameSettings-form-label {
   font-size: 12px;
   color: #000000;
   margin: 0;
@@ -153,122 +182,129 @@
   flex-shrink: 0;
   white-space: nowrap;
 }
-.form-select,
-.item-add-form-select-item {
-  background-color: #e0e0e0; /* light grey */
-  color: #333; /* dark text for readability */
+
+.gameSettings-form-select,
+.gameSettings-item-add-form-select-item {
+  background-color: #e0e0e0;
+  color: #333;
   border: 1px solid #b0b0b0;
   border-radius: 6px;
   padding: 6px 10px;
   font-size: 14px;
   outline: none;
 }
-.form-select:focus,
-.item-add-form-select-item:focus {
+
+.gameSettings-form-select:focus,
+.gameSettings-item-add-form-select-item:focus {
   border-color: #999;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
-.form-input,
-.form-select {
-  padding: 8px 12px;
+
+.gameSettings-form-input,
+.gameSettings-form-select {
+  height: 25px;
+  padding: 6px 12px;
   border: 1px solid #d1d5db;
   border-radius: 4px;
-  font-size: 13px;
+  font-size: 10px;
   background: white;
-  min-height: 36px;
   box-sizing: border-box;
-  flex: 1; /* Allow inputs to grow within their containers */
+  flex: 1;
+  font-family: "Montserrat";
 }
-.form-group:has(.form-input[value="10.00"]) .form-input,
-.form-group:has(.form-input[value="9"]) .form-input,
-.form-group:has(.form-input[value="1"]) .form-input,
-.form-group:has(.form-input[value="100"]) .form-input {
+
+.gameSettings-form-group:has(.gameSettings-form-input[value="10.00"]) .gameSettings-form-input,
+.gameSettings-form-group:has(.gameSettings-form-input[value="9"]) .gameSettings-form-input,
+.gameSettings-form-group:has(.gameSettings-form-input[value="1"]) .gameSettings-form-input,
+.gameSettings-form-group:has(.gameSettings-form-input[value="100"]) .gameSettings-form-input {
   max-width: 80px;
   flex: 0 0 80px;
 }
+
 /* Medium inputs for text values */
-.form-group:has(.form-input[value*="Trampoline"]) .form-input {
+.gameSettings-form-group:has(.gameSettings-form-input[value*="Trampoline"]) .gameSettings-form-input {
   max-width: 150px;
   flex: 0 0 150px;
 }
 
 /* Longer inputs for MAC ID */
-.form-group:has(.form-input[value*="CC:45:AF"]) .form-input {
+.gameSettings-form-group:has(.gameSettings-form-input[value*="CC:45:AF"]) .gameSettings-form-input {
   max-width: 180px;
   flex: 0 0 180px;
 }
 
-
 /* Select dropdowns - adjust based on content */
-.form-select {
-  /* background-color: #f0f0f0 !important;  */
-  -moz-appearance: none; /* Firefox */
-  -webkit-appearance: none; /* Safari/Chrome */
+.gameSettings-form-select {
+  font-family: "Montserrat";
   appearance: none;
-  
-  /* Add your custom arrow image */
   background-image: url("../components/assets/drop_down.png");
   background-repeat: no-repeat;
   background-position: right 8px center;
-  background-size: 14px 14px;
+  background-size: 10px 10px;
   padding-right: 28px;
   border: 1px solid #d1d5db;
   border-radius: 4px;
-  font-size: 13px;
-  min-height: 36px;
+  font-size: 10px;
   box-sizing: border-box;
+  
 }
 
-
-/* Alternative approach using specific classes (recommended) */
-.short-input {
+/* Specific input size classes */
+.gameSettings-short-input {
   max-width: 80px !important;
   flex: 0 0 80px !important;
 }
 
-.medium-input {
+.gameSettings-medium-input {
   max-width: 150px !important;
   flex: 0 0 150px !important;
 }
 
-.long-input {
+.gameSettings-long-input {
   max-width: 180px !important;
   flex: 0 0 180px !important;
 }
 
-.mac-input {
+.gameSettings-mac-input {
   max-width: 200px !important;
   flex: 0 0 200px !important;
 }
 
 /* Last Updated Row */
-.last-updated-row {
+.gameSettings-last-updated-row {
   display: flex;
   margin-top: 10px;
   margin-bottom: 15px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #e2e8f0; /* Moved border to bottom */
+  border-bottom: 1px solid #e2e8f0;
   gap: 10px;
 }
 
-.last-updated-item {
+.gameSettings-last-updated-item {
   display: flex;
   align-items: center;
-  gap: 10px; /* Reduced gap between label and value */
+  gap: 10px;
 }
 
-.last-updated-label {
+.gameSettings-last-updated-label {
   font-size: 12px;
   font-weight: 400;
   color: #000000;
 }
 
-.last-updated-value {
+.gameSettings-last-updated-value {
   font-size: 12px;
   color: #92929D;
 }
 
-.btn {
+/* Action Buttons */
+.gameSettings-action-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.gameSettings-btn {
   padding: 10px 20px;
   border-radius: 6px;
   font-size: 13px;
@@ -281,75 +317,67 @@
   transition: all 0.2s ease;
 }
 
-.btn-update {
+.gameSettings-btn-update {
   background: #2258F8;
   color: white;
 }
 
-.btn-save {
+.gameSettings-btn-save {
   background: #FCD730;
   color: white;
 }
 
-.btn-new {
+.gameSettings-btn-new {
   background: #42C700;
   color: white;
 }
 
-
-.btn-duplicate {
+.gameSettings-btn-duplicate {
   background: #BE20DD;
   color: white;
 }
 
-.btn-close {
+.gameSettings-btn-close {
   background: #3B4053;
   color: white;
 }
 
-@media (max-width: 480px) {
-  .timeform-checkbox-grid {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-}
 /* Responsive Design */
 @media (max-width: 768px) {
-  .popup-container {
+  .gameSettings-popup-container {
     width: 95%;
     margin: 10px;
   }
   
-  .form-row {
+  .gameSettings-form-row {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
   
-  .checkbox-row {
+  .gameSettings-checkbox-row {
     display: flex;
     gap: 30px;
     margin-bottom: 20px;
-    align-items: flex-start; /* Changed from center to flex-start */
+    align-items: flex-start;
   }
   
-  .last-updated-row {
+  .gameSettings-last-updated-row {
     flex-direction: column;
     gap: 10px;
   }
   
-  .action-buttons {
+  .gameSettings-action-buttons {
     flex-wrap: wrap;
     justify-content: center;
   }
 }
 
 @media (max-width: 480px) {
-  .form-row {
+  .gameSettings-form-row {
     grid-template-columns: 1fr;
   }
   
-  .popup-body {
+  .gameSettings-popup-body {
     padding: 15px;
   }
 
