@@ -62,20 +62,20 @@ const AddGamesModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="card-productmodal-overlay" onClick={onClose}>
+    <div className="cardproductadd-modal-overlay" onClick={onClose}>
       <div
-        className="card-productmodal-container"
+        className="cardproductadd-modal-container"
         onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside
       >
         {/* Header */}
-        <div className="modal-header">
-          <div className="header-content">
-            <img src={GameIcon} alt="Games" className="game-image" />
-            <h2 className="modal-title">Add Games</h2>
+        <div className="cardproductadd-modal-header">
+          <div className="cardproductadd-header-content">
+            <img src={GameIcon} alt="Games" className="cardproductadd-game-image" />
+            <h2 className="cardproductadd-modal-title">Add Games</h2>
           </div>
-          <button onClick={handleCancel} className="close-button33">
+          <button onClick={handleCancel} className="cardproductadd-close-button33">
             <svg
-              className="close-icon33"
+              className="cardproductadd-close-icon33"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -91,44 +91,44 @@ const AddGamesModal = ({ isOpen, onClose }) => {
         </div>
 
         {/* Table Container */}
-        <div className="table-container">
-          <div className="table-wrapper1">
-            <table className="games-table">
-              <thead className="table-header">
+        <div className="cardproductadd-table-container">
+          <div className="cardproductadd-table-wrapper1">
+            <table className="cardproductadd-games-table">
+              <thead className="cardproductadd-table-header">
                 <tr>
-                  <th className="header-cell header-cell-select">Select</th>
-                  <th className="header-cell header-cell-game">Game</th>
-                  <th className="header-cell header-cell-count">Play Count</th>
+                  <th className="cardproductadd-header-cell cardproductadd-header-cell-select">Select</th>
+                  <th className="cardproductadd-header-cell cardproductadd-header-cell-game">Game</th>
+                  <th className="cardproductadd-header-cell cardproductadd-header-cell-count">Play Count</th>
                 </tr>
               </thead>
-              <tbody className="table-body">
+              <tbody className="cardproductadd-table-body">
                 {games.map((game, index) => (
                   <tr
                     key={game.id}
-                    className={`body-row ${
-                      index % 2 === 0 ? "row-yellow" : "row-white"
+                    className={`cardproductadd-body-row ${
+                      index % 2 === 0 ? "cardproductadd-row-yellow" : "cardproductadd-row-white"
                     }`}
                   >
-                    <td className="table-cell cell-select">
-                      <div className="checkbox-container1">
+                    <td className="cardproductadd-table-cell cardproductadd-cell-select">
+                      <div className="cardproductadd-checkbox-container1">
                         <input
                           type="checkbox"
                           id={`game-${game.id}`}
                           checked={selectedGames[game.id] || false}
                           onChange={() => handleCheckboxChange(game.id)}
-                          className="checkbox-input"
+                          className="cardproductadd-checkbox-input"
                         />
                         <label
                           htmlFor={`game-${game.id}`}
-                          className={`checkbox-label ${
+                          className={`cardproductadd-checkbox-label ${
                             selectedGames[game.id]
-                              ? "checkbox-checked"
-                              : "checkbox-unchecked"
+                              ? "cardproductadd-checkbox-checked"
+                              : "cardproductadd-checkbox-unchecked"
                           }`}
                         >
                           {selectedGames[game.id] && (
                             <svg
-                              className="checkmark"
+                              className="cardproductadd-checkmark"
                               fill="currentColor"
                               viewBox="0 0 20 20"
                             >
@@ -142,8 +142,8 @@ const AddGamesModal = ({ isOpen, onClose }) => {
                         </label>
                       </div>
                     </td>
-                    <td className="table-cell cell-game">{game.name}</td>
-                    <td className="table-cell cell-count">{game.count}</td>
+                    <td className="cardproductadd-table-cell cardproductadd-cell-game">{game.name}</td>
+                    <td className="cardproductadd-table-cell cardproductadd-cell-count">{game.count}</td>
                   </tr>
                 ))}
               </tbody>
@@ -152,11 +152,11 @@ const AddGamesModal = ({ isOpen, onClose }) => {
         </div>
 
         {/* Footer */}
-        <div className="modal-footer">
-          <button onClick={handleSave} className="save-button">
+        <div className="cardproductadd-modal-footer">
+          <button onClick={handleSave} className="cardproductadd-save-button">
             Save
           </button>
-          <button onClick={handleCancel} className="cancel-button">
+          <button onClick={handleCancel} className="cardproductadd-cancel-button">
             Cancel
           </button>
         </div>
