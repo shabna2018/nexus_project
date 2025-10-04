@@ -3,9 +3,8 @@ import { useNavigate } from "react-router-dom";
 import "./cardproductform.css";
 import AddGamesModal from "./cardproductadd";
 import cardIcon from "../../components/assets/card-icon.png"; 
-import  cancelIcon from "../../components/assets/iconoir_cancel.png"; 
-import  calendarIcon from "../../components/assets/calander.png"; 
-
+import cancelIcon from "../../components/assets/iconoir_cancel.png"; 
+import calendarIcon from "../../components/assets/calander.png"; 
 
 const CardProduct = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -14,8 +13,8 @@ const CardProduct = () => {
   
   if (!isOpen) {
     return (
-      <div className="demo-container7">
-        <button onClick={() => setIsOpen(true)} className="open-modal-button1">
+      <div className="cardform-demo-container">
+        <button onClick={() => setIsOpen(true)} className="cardform-open-modal-button">
           Open Card Product Modal
         </button>
       </div>
@@ -23,80 +22,79 @@ const CardProduct = () => {
   }
   
   return (
-    <div className="modal-overlay1">
-      <div className="modal-container1">
+    <div className="cardform-modal-overlay">
+      <div className="cardform-modal-container">
         {/* Header */}
-     <div className="modal-header1">
-  <div className="header-title1">
-    <img src={cardIcon} alt="Card Icon" className="folder-icon1" />
-    <h2 className="title-text1">Card Product</h2>
-  </div>
-  <button onClick={() => navigate("/card-product")} className="close-button23">
-  <img src={cancelIcon} alt="Close" className="close-icon22" />
-</button>
-
-</div>
+        <div className="cardform-modal-header">
+          <div className="cardform-header-title">
+            <img src={cardIcon} alt="Card Icon" className="cardform-folder-icon" />
+            <h2 className="cardform-title-text">Card Product</h2>
+          </div>
+          <button onClick={() => navigate("/card-product")} className="cardform-close-button">
+            <img src={cancelIcon} alt="Close" className="cardform-close-icon" />
+          </button>
+        </div>
         
         {/* Content Area */}
-        <div className="modal-content1">
+        <div className="cardform-modal-content">
           {/* Main Content */}
-          <div className="main-content1">
-            <div className="content-wrapper12">
-              <div className="main-sections1">
+          <div className="cardform-main-content">
+            <div className="cardform-content-wrapper">
+              <div className="cardform-main-sections">
                 {/* Product Section */}
-                <div className="product-section1">
-                  <div className="section-header1">Product</div>
-                  <div className="product-content1">
+                <div className="cardform-product-section">
+                  <div className="cardform-section-header">Product</div>
+                  <div className="cardform-product-content">
                     {/* Row 1 */}
-                    <div className="form-row1 cols-31">
-                      <div className="form-group1">
-                        <label className="form-label1">Product Id</label>
+                    <div className="cardform-form-row cardform-cols-3">
+                      <div className="cardform-form-group">
+                        <label className="cardform-form-label">Product Id</label>
                         <input
                           type="text"
                           value="23456"
-                          className="form-input1"
+                          className="cardform-form-input"
                           readOnly
                         />
                       </div>
-                      <div className="form-group1">
-                        <label className="form-label1">Product Name</label>
+                      <div className="cardform-form-group">
+                        <label className="cardform-form-label">Product Name</label>
                         <input
                           type="text"
                           value="New card $100"
-                          className="form-input1"
+                          className="cardform-form-input"
                         />
                       </div>
-                      <div className="form-group1">
-                        <label className="form-label1">POS Counter</label>
-                        <select className="form-select1">
+                      <div className="cardform-form-group">
+                        <label className="cardform-form-label">POS Counter</label>
+                        <select className="cardform-form-select">
                           <option>Default</option>
                         </select>
                       </div>
                     </div>
                     
                     {/* Row 2 */}
-                    <div className="form-row1 cols-31">
-                      <div className="form-group1">
-                        <label className="form-label1">Category</label>
-                        <select className="form-select1">
+                    <div className="cardform-form-row cardform-cols-3">
+                      <div className="cardform-form-group">
+                        <label className="cardform-form-label">Category</label>
+                        <select className="cardform-form-select">
                           <option>Card product</option>
                         </select>
                       </div>
-                      <div className="form-group1">
-                        <label className="form-label1">Display Group</label>
-                        <select className="form-select1">
+                      <div className="cardform-form-group">
+                        <label className="cardform-form-label">Display Group</label>
+                        <select className="cardform-form-select">
                           <option>New Card</option>
                         </select>
                       </div>
-                      <div className="form-group1">
-                        <label className="form-label1">Display Order</label>
-                        <input type="text" value="45" className="form-input1" />
+                      <div className="cardform-form-group">
+                        <label className="cardform-form-label">Display Order</label>
+                        <input type="text" value="45" className="cardform-form-input" />
                       </div>
                     </div>
                     
                     {/* Checkboxes */}
-                    <div className="checkbox-section33">
-                      <div className="checkbox-grid33">
+                    <div className="cardform-checkbox-section">
+                      <div className="cardform-checkbox-grid">
                         {[
                           "Active",
                           "Display in POS",
@@ -105,14 +103,14 @@ const CardProduct = () => {
                           "Customer Card",
                           "Favourite",
                         ].map((label, i) => (
-                          <div key={i} className="checkbox-item33">
+                          <div key={i} className="cardform-checkbox-item">
                             <input
                               type="checkbox"
-                              className="checkbox33"
+                              className="cardform-checkbox"
                               defaultChecked={label === "Active"}
                               readOnly={label === "Active"}
                             />
-                            <span className="checkbox-label33">{label}</span>
+                            <span className="cardform-checkbox-label">{label}</span>
                           </div>
                         ))}
                       </div>
@@ -121,74 +119,74 @@ const CardProduct = () => {
                 </div>
                 
                 {/* Bottom Sections */}
-                <div className="bottom-sections1">
+                <div className="cardform-bottom-sections">
                   {/* Price Section */}
-                  <div className="price-section1">
-                    <div className="section-header1 price-header1">Price</div>
-                    <div className="section-content1">
+                  <div className="cardform-price-section">
+                    <div className="cardform-section-header cardform-price-header">Price</div>
+                    <div className="cardform-section-content">
                       {/* Face Value and Selling Price */}
-                      <div className="form-row1 cols-21">
-                        <div className="form-group1">
-                          <label className="form-label1">Face Value</label>
+                      <div className="cardform-form-row cardform-cols-2">
+                        <div className="cardform-form-group">
+                          <label className="cardform-form-label">Face Value</label>
                           <input
                             type="text"
                             value="$90.00"
-                            className="form-input1"
+                            className="cardform-form-input"
                           />
                         </div>
-                        <div className="form-group1">
-                          <label className="form-label1">Selling price</label>
+                        <div className="cardform-form-group">
+                          <label className="cardform-form-label">Selling price</label>
                           <input
                             type="text"
                             value="$100.00"
-                            className="form-input1"
+                            className="cardform-form-input"
                           />
                         </div>
                       </div>
                       
                       {/* Tax Inclusive */}
-                      <div className="checkbox-item1 tax-inclusive-row">
-                        <label className="checkbox-label2">Tax Inclusive ?</label>
-                        <input type="checkbox" className="checkbox12" />
+                      <div className="cardform-checkbox-item-tax cardform-tax-inclusive-row">
+                        <label className="cardform-checkbox-label-tax">Tax Inclusive ?</label>
+                        <input type="checkbox" className="cardform-checkbox-tax" />
                       </div>
                       
                       {/* Separator Line */}
-                      <div className="separator-line1"></div>
+                      <div className="cardform-separator-line"></div>
                       
                       {/* Tax Category */}
-                      <div className="form-row1 cols-21">
-                        <div className="form-group1">
-                          <label className="form-label1">Tax Category</label>
-                          <select className="form-select1">
+                      <div className="cardform-form-row cardform-cols-2">
+                        <div className="cardform-form-group">
+                          <label className="cardform-form-label">Tax Category</label>
+                          <select className="cardform-form-select">
                             <option>TAX001</option>
                           </select>
                         </div>
-                        <div className="form-group1">
-                          <label className="form-label1">Tax 1 %</label>
+                        <div className="cardform-form-group">
+                          <label className="cardform-form-label">Tax 1 %</label>
                           <input
                             type="text"
                             value="10.000000%"
-                            className="form-input1"
+                            className="cardform-form-input"
                           />
                         </div>
                       </div>
                       
                       {/* Tax and Price No Tax */}
-                      <div className="form-row1 cols-21">
-                        <div className="form-group1">
-                          <label className="form-label1">Tax</label>
+                      <div className="cardform-form-row cardform-cols-2">
+                        <div className="cardform-form-group">
+                          <label className="cardform-form-label">Tax</label>
                           <input
                             type="text"
                             value="10.00"
-                            className="form-input1"
+                            className="cardform-form-input"
                           />
                         </div>
-                        <div className="form-group1">
-                          <label className="form-label1">Price No Tax</label>
+                        <div className="cardform-form-group">
+                          <label className="cardform-form-label">Price No Tax</label>
                           <input
                             type="text"
                             value="90.00"
-                            className="form-input1"
+                            className="cardform-form-input"
                           />
                         </div>
                       </div>
@@ -196,40 +194,40 @@ const CardProduct = () => {
                   </div>
                   
                   {/* Entitlements Section */}
-                  <div className="entitlements-section1">
-                    <div className="section-header1 entitlements-header1">Entitlements</div>
-                    <div className="section-content1">
-                      <div className="entitlements-row1">
+                  <div className="cardform-entitlements-section">
+                    <div className="cardform-section-header cardform-entitlements-header">Entitlements</div>
+                    <div className="cardform-section-content">
+                      <div className="cardform-entitlements-row">
                         {/* Left side column */}
-                        <div className="left-column1">
-                          <div className="form-group1">
-                            <label className="form-label1">Cash Balance</label>
+                        <div className="cardform-left-column">
+                          <div className="cardform-form-group">
+                            <label className="cardform-form-label">Cash Balance</label>
                             <input
                               type="text"
                               value="$100.00"
-                              className="form-input1 cash-balance-input1"
+                              className="cardform-form-input cardform-cash-balance-input"
                             />
                           </div>
-                          <div className="form-group1">
-                            <label className="form-label1">Bonus Balance</label>
+                          <div className="cardform-form-group">
+                            <label className="cardform-form-label">Bonus Balance</label>
                             <input
                               type="text"
                               value="$20.00"
-                              className="form-input1 bonus-balance-input1"
+                              className="cardform-form-input cardform-bonus-balance-input"
                             />
                           </div>
                           
                           {/* Membership + Active Profile */}
-                          <div className="bottom-entitlements-row1">
-                            <div className="form-group1 membership-group1">
-                              <label className="form-label1">Membership</label>
-                              <select className="form-select1">
+                          <div className="cardform-bottom-entitlements-row">
+                            <div className="cardform-form-group cardform-membership-group">
+                              <label className="cardform-form-label">Membership</label>
+                              <select className="cardform-form-select">
                                 <option>Happy Monday</option>
                               </select>
                             </div>
-                            <div className="form-group1 active-profile-group1">
-                              <label className="form-label1">Active Profile</label>
-                              <select className="form-select1">
+                            <div className="cardform-form-group cardform-active-profile-group">
+                              <label className="cardform-form-label">Active Profile</label>
+                              <select className="cardform-form-select">
                                 <option>Attraction</option>
                               </select>
                             </div>
@@ -237,52 +235,52 @@ const CardProduct = () => {
                         </div>
                         
                         {/* Right side column */}
-                        <div className="right-column1">
+                        <div className="cardform-right-column">
                           {/* Card Expiry Date */}
-                          <div className="form-group1 card-expiry-group1">
-                            <label className="form-label1">Card Expiry date</label>
-                            <div className="date-input-with-calendar1">
+                          <div className="cardform-form-group cardform-card-expiry-group">
+                            <label className="cardform-form-label">Card Expiry date</label>
+                            <div className="cardform-date-input-with-calendar">
                               <input
                                 type="text"
                                 value="23/04/2025"
-                                className="form-input1 card-expiry-input1"
+                                className="cardform-form-input cardform-card-expiry-input"
                               />
-<span className="calendar-icon1">
-  <img src={calendarIcon} alt="Calendar" className="calendar-image1" />
-</span>
+                              <span className="cardform-calendar-icon">
+                                <img src={calendarIcon} alt="Calendar" className="cardform-calendar-image" />
+                              </span>
                             </div>
                           </div>
                           
                           {/* Card Valid */}
-                          <div className="form-group1 card-valid-group1">
-                            <label className="form-label1">Card Valid (days)</label>
-                            <div className="card-valid-horizontal1">
+                          <div className="cardform-form-group cardform-card-valid-group">
+                            <label className="cardform-form-label">Card Valid (days)</label>
+                            <div className="cardform-card-valid-horizontal">
                               <input
                                 type="text"
                                 value="360"
-                                className="form-input1 card-valid-input1"
+                                className="cardform-form-input cardform-card-valid-input"
                               />
-                              <button className="clear-button1">Clear Date</button>
+                              <button className="cardform-clear-button">Clear Date</button>
                             </div>
                           </div>
                           
                           {/* Quantity + VIP */}
-                          <div className="quantity-vip-row1">
-                            <div className="form-group1 quantity-group1">
-                              <label className="form-label1">Quantity</label>
+                          <div className="cardform-quantity-vip-row">
+                            <div className="cardform-form-group cardform-quantity-group">
+                              <label className="cardform-form-label">Quantity</label>
                               <input
                                 type="text"
                                 value="112"
-                                className="form-input1 quantity-input1"
+                                className="cardform-form-input cardform-quantity-input"
                               />
                             </div>
-                            <div className="vip-card-group1">
-                              <label htmlFor="vipCard" className="vip-card-label1">
+                            <div className="cardform-vip-card-group">
+                              <label htmlFor="vipCard" className="cardform-vip-card-label">
                                 VIP Card
                               </label>
                               <input
                                 type="checkbox"
-                                className="checkbox1 vip-checkbox1"
+                                className="cardform-checkbox cardform-vip-checkbox"
                                 id="vipCard"
                               />
                             </div>
@@ -290,7 +288,7 @@ const CardProduct = () => {
                           
                           {/* Add Games Button */}
                           <button
-                            className="add-games-button1"
+                            className="cardform-add-games-button"
                             onClick={() => setShowAddGamesModal(true)}
                           >
                             Add Games
@@ -305,10 +303,10 @@ const CardProduct = () => {
           </div>
           
           {/* Sidebar */}
-          <div className="sidebar1">
-            <div className="registration-section1">
-              <div className="registration-header1">Registration</div>
-              <div className="registration-body1">
+          <div className="cardform-sidebar">
+            <div className="cardform-registration-section">
+              <div className="cardform-registration-header">Registration</div>
+              <div className="cardform-registration-body">
                 {[
                   "Photo",
                   "First Name",
@@ -317,17 +315,17 @@ const CardProduct = () => {
                   "DOB",
                   "Sex",
                 ].map((label, index) => (
-                  <div key={index} className="registration-checkbox-row1">
-                    <span className="registration-label1">{label}</span>
-                    <input type="checkbox" className="registration-checkbox1" />
+                  <div key={index} className="cardform-registration-checkbox-row">
+                    <span className="cardform-registration-label">{label}</span>
+                    <input type="checkbox" className="cardform-registration-checkbox" />
                   </div>
                 ))}
               </div>
             </div>
             
-            <div className="active-days-section1">
-              <div className="active-days-header1">Active days for sale</div>
-              <div className="active-days-content1">
+            <div className="cardform-active-days-section">
+              <div className="cardform-active-days-header">Active days for sale</div>
+              <div className="cardform-active-days-content">
                 {[
                   "Sunday",
                   "Monday",
@@ -337,9 +335,9 @@ const CardProduct = () => {
                   "Friday",
                   "Saturday",
                 ].map((day, index) => (
-                  <div key={index} className="day-row1">
-                    <span className="day-name1">{day}</span>
-                    <input type="checkbox" className="registration-checkbox1" />
+                  <div key={index} className="cardform-day-row">
+                    <span className="cardform-day-name">{day}</span>
+                    <input type="checkbox" className="cardform-registration-checkbox" />
                   </div>
                 ))}
               </div>
@@ -348,21 +346,21 @@ const CardProduct = () => {
         </div>
         
         {/* Last Updated Section */}
-        <div className="last-updated-section1">
-          <div className="last-updated-info1">
-            <span className="last-updated-label1">Last Updated Date</span>
-            <span className="last-updated-value1">09-Nov-2024 12:11</span>
-            <span className="last-updated-label1">Last Updated User</span>
-            <span className="last-updated-value1">Ahmed jaseel</span>
+        <div className="cardform-last-updated-section">
+          <div className="cardform-last-updated-info">
+            <span className="cardform-last-updated-label">Last Updated Date</span>
+            <span className="cardform-last-updated-value">09-Nov-2024 12:11</span>
+            <span className="cardform-last-updated-label">Last Updated User</span>
+            <span className="cardform-last-updated-value">Ahmed jaseel</span>
           </div>
         </div>
         
         {/* Footer */}
-        <div className="modal-footer1">
-          <button className="footer-button1 save1">Save</button>
-          <button className="footer-button1 new1">New</button>
-          <button className="footer-button1 duplicate1">Duplicate</button>
-          <button className="footer-button1 cancel1">Cancel</button>
+        <div className="cardform-modal-footer">
+          <button className="cardform-footer-button cardform-save">Save</button>
+          <button className="cardform-footer-button cardform-new">New</button>
+          <button className="cardform-footer-button cardform-duplicate">Duplicate</button>
+          <button className="cardform-footer-button cardform-cancel">Cancel</button>
         </div>
       </div>
       

@@ -1,12 +1,12 @@
 .access-profile-wrapper {
-  background-color: #f5f5f5;;;
+  background-color: #f5f5f5;
   padding: 10px;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", sans-serif;
   min-height: 100vh;
   font-size: 11px;
 }
 
-.header {
+.access-profile-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,91 +14,97 @@
   margin-top: 20px;
 }
 
-.header-left {
+.access-profile-header-left {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.icon-placeholder {
+.access-profile-icon-placeholder {
   width: 20px;
   height: 20px;
   background-color: #4a5568;
   border-radius: 3px;
 }
+
 .access-profile-icon {
   padding: 0px 0px 0px 15px;
 }
 
-.header-title {
+.access-profile-header-title {
   font-size: 25px;
   color: #1C212D;
   margin: 0;
   font-weight: normal;
 }
 
-.header-buttons {
+.access-profile-header-buttons {
   display: flex;
   gap: 8px;
 }
 
-.btn {
+.access-profile-btn {
   padding: 8px 16px;
   border: none;
   border-radius: 9px;
   cursor: pointer;
   transition: all 0.2s;
-  font-size: 16px;
+  font-size: 13px;
 }
 
-.btn-save {
+.access-profile-btn-save {
   background-color: #FCD730;
   color: #1C212D;
 }
 
-.btn-add {
+.access-profile-btn-add {
   background-color: #2258F8;
   color: white;
 }
 
-.btn-delete {
+.access-profile-btn-delete {
   background-color: #FF0000;
   color: white;
 }
-.profile-table thead th {
+
+.access-profile-table thead th {
   border: none;
 }
-.profile-table thead tr {
-  border-bottom: 1px solid #e2e8f0; 
+
+.access-profile-table thead tr {
+  border-bottom: 1px solid #e2e8f0;
 }
+
 /* Center align header text for Active column */
-.profile-table thead th.active-column {
+.access-profile-table thead th.access-profile-active-column {
   text-align: center;
   vertical-align: middle;
   padding-left: 0;
   padding-right: 0;
 }
 
-.profile-table {
+.access-profile-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 11px;
   max-height: 400px;
   overflow-y: auto;
-  border-radius: 16px; 
-  overflow: hidden; 
+  border-radius: 16px;
+  overflow: hidden;
 }
 
-.profile-table thead {
+.access-profile-table thead {
   display: table;
   width: 100%;
   table-layout: fixed;
 }
- .active-column {
+
+.access-profile-active-column {
   width: 80px; /* Adjust as per your requirement */
   text-align: center; /* Optional: center the checkbox */
 }
-.profile-table tbody {
+
+.access-profile-table tbody {
   display: block;
   max-height: 300px;
   overflow-y: auto;
@@ -106,13 +112,13 @@
   width: 100%;
 }
 
-.profile-table tbody tr {
+.access-profile-table tbody tr {
   display: table;
   width: 100%;
   table-layout: fixed;
 }
 
-.th {
+.access-profile-th {
   background-color: #2E2343;
   color: #FFFFFF;
   padding: 10px 12px;
@@ -125,30 +131,30 @@
   z-index: 10;
 }
 
-.first-column {
+.access-profile-first-column {
   border-left: none;
 }
 
-.last-column {
+.access-profile-last-column {
   border-right: none;
 }
 
-.td {
+.access-profile-td {
   padding: 10px 12px;
   border-right: 1px solid #e2e8f0;
   color: #333;
   font-size: 15px;
 }
 
-.even-row {
+.access-profile-even-row {
   background-color: #FFFAE2;
 }
 
-.odd-row {
+.access-profile-odd-row {
   background-color: white;
 }
 
-.custom-checkbox {
+.access-profile-custom-checkbox {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -163,7 +169,7 @@
   margin: 0;
 }
 
-.custom-checkbox:checked {
+.access-profile-custom-checkbox:checked {
   background-color: #fcd730;
   background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0ibTEwIDMtNiA2LTItMiIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K');
   background-size: 10px 10px;
@@ -172,11 +178,11 @@
   border-color: #fcd730;
 }
 
-.custom-checkbox:hover {
+.access-profile-custom-checkbox:hover {
   border-color: #fcd730;
 }
 
-.custom-checkbox:focus {
+.access-profile-custom-checkbox:focus {
   outline: none;
   box-shadow: 0 0 0 2px rgba(252, 215, 48, 0.3);
 }

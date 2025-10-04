@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './checkbalance.css';
 import profileIcon from '../components/assets/profile-icon.png';
 import searchIcon from '../components/assets/search-check.png';
+import SearchCard from './searchcard';
 
 export default function CheckBalance() {
+  const navigate = useNavigate();
   const [cardNumber, setCardNumber] = useState('FGH06781');
+  const [isSearchCardOpen, setIsSearchCardOpen] = useState(false);
   const [userData, setUserData] = useState({
     name: 'Muhammed Abdulla Jaleel',
     status: 'Active',
@@ -25,6 +29,24 @@ export default function CheckBalance() {
     expirition: '22-May-24 2:45:00 PM'
   });
 
+  const handleViewTransaction = () => {
+    navigate('/transaction', { state: { cardNumber, userData } });
+  };
+
+  const handleSearchCard = () => {
+    setIsSearchCardOpen(true);
+  };
+
+  const handleCloseSearchCard = () => {
+    setIsSearchCardOpen(false);
+  };
+
+  const handleSelectCard = (card) => {
+    // Update card number with selected card
+    setCardNumber(card.cardNumber);
+    // You can also fetch user data based on selected card here
+  };
+
   return (
     <div className="check-balance-container-check">
       {/* Search Section - Outside main wrapper */}
@@ -43,7 +65,9 @@ export default function CheckBalance() {
 
         <div className="action-buttons-check">
           <button className="refresh-btn-check">Refresh</button>
-          <button className="search-card-btn-check">Search Card</button>
+          <button className="search-card-btn-check" onClick={handleSearchCard}>
+            Search Card
+          </button>
         </div>
       </div>
 
@@ -181,11 +205,20 @@ export default function CheckBalance() {
             {/* View Transaction Button */}
             <div className="transaction-separator-check"></div>
             <div className="view-transaction-wrapper-check">
-              <button className="view-transaction-btn-check">View Transaction</button>
+              <button className="view-transaction-btn-check" onClick={handleViewTransaction}>
+                View Transaction
+              </button>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Search Card Modal */}
+      <SearchCard 
+        isOpen={isSearchCardOpen}
+        onClose={handleCloseSearchCard}
+        onSelectCard={handleSelectCard}
+      />
     </div>
   );
 }

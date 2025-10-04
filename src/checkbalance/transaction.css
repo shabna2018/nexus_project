@@ -1,0 +1,506 @@
+/* Main Container */
+.transaction-table-container-check-transaction {
+  width: 100%;
+  height: 100vh;
+  background: #f8f9fa;
+  padding: 0;
+  padding-top: 10px;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+/* Button Container - Updated */
+.transaction-button-container-check-transaction {
+  display: flex;
+  gap: 12px;
+  padding: 20px;
+  background: white;
+  border: 1px solid #FFFFFF;
+  border-radius: 8px;
+  margin: 20px;
+  width: fit-content;
+}
+
+/* Action Buttons - Updated */
+.transaction-btn-check-transaction {
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.transaction-btn-icon-check-transaction {
+  width: 18px;
+  height: 18px;
+}
+
+.transaction-btn-refresh-check-transaction {
+  background-color: #FFC107;
+  color: white;
+}
+
+.transaction-btn-refresh-check-transaction:hover {
+  background-color: #FFB300;
+}
+
+.transaction-btn-export-check-transaction {
+  background-color: #42C700;
+  color: white;
+}
+
+.transaction-btn-export-check-transaction:hover {
+  background-color: #38A700;
+}
+
+.transaction-btn-print-check-transaction {
+  background-color: #FFC107;
+  color: white;
+}
+
+.transaction-btn-print-check-transaction:hover {
+  background-color: #FFB300;
+}
+
+.transaction-btn-email-check-transaction {
+  background-color: #FF6B35;
+  color: white;
+}
+
+.transaction-btn-email-check-transaction:hover {
+  background-color: #E55A2B;
+}
+
+/* User Info Summary Bar - Updated */
+.transaction-info-bar-check-transaction {
+  display: flex;
+  gap: 0;
+  padding: 0;
+  background: white;
+  border: 1px solid #DCE0EB;
+  border-radius: 8px;
+  margin: 0 20px 20px 20px;
+  overflow: hidden;
+}
+
+/* Card Number Item - Separate Styling */
+.transaction-card-number-item-check-transaction {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0;
+  padding: 20px 24px;
+  
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+}
+
+.transaction-card-number-item-check-transaction::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+      left: 126%;
+  transform: translateY(-50%);
+  height: 100%;
+  width: 1px;
+  background-color: #DCE0EB;
+}
+
+.transaction-card-number-label-check-transaction {
+  font-size: 16px;
+  color: #000000;
+  font-weight: 500;
+  padding: 0px 0px 0px 40px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.transaction-card-number-value-check-transaction {
+  font-size: 16px;
+  color: #000000;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  margin-left: 18px;
+}
+
+/* Other Info Items - Separate Styling */
+.transaction-info-item-check-transaction {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: 120px;
+  padding: 20px 16px;
+  flex: 1;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+}
+
+.transaction-info-item-check-transaction:last-child {
+  border-right: none;
+}
+
+.transaction-info-label-check-transaction {
+  font-size: 16px;
+  color: #000000;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.transaction-dropdown-icon-check-transaction {
+  width: 12px;
+  height: 12px;
+}
+
+.transaction-info-value-check-transaction {
+  font-size: 16px;
+  color: #000000;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Table Wrapper - NO SCROLL */
+.transaction-table-wrapper-check-transaction {
+  margin: 0 20px 20px 20px;
+  overflow: visible;
+  height: calc(100vh - 280px);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Table Header */
+.transaction-table-header-check-transaction {
+  display: flex;
+  background: white;
+  border: 1px solid #DCE0EB;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  padding: 0;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.transaction-header-cell-check-transaction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 20px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #3B4053;
+  background: #f8f9fa;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.transaction-header-cell-check-transaction:last-child {
+  border-right: none;
+}
+
+/* Column Widths */
+.transaction-col-device-check-transaction {
+  width: 10%;
+  min-width: 80px;
+}
+
+.transaction-col-promotion-check-transaction {
+  width: 12%;
+  min-width: 100px;
+}
+
+.transaction-col-cash-check-transaction {
+  width: 10%;
+  min-width: 80px;
+}
+
+.transaction-col-bonus-check-transaction {
+  width: 10%;
+  min-width: 90px;
+}
+
+.transaction-col-coins-check-transaction {
+  width: 8%;
+  min-width: 60px;
+}
+
+.transaction-col-time-check-transaction {
+  width: 8%;
+  min-width: 70px;
+}
+
+.transaction-col-action-check-transaction {
+  width: 8%;
+  min-width: 70px;
+}
+
+.transaction-col-timestamp-check-transaction {
+  width: 14%;
+  min-width: 140px;
+}
+
+.transaction-col-employee-check-transaction {
+  width: 12%;
+  min-width: 130px;
+}
+
+.transaction-col-location-check-transaction {
+  width: 12%;
+  min-width: 120px;
+}
+
+/* Sort Icon */
+.transaction-sort-icon-check-transaction {
+  width: 10px;
+  height: 13px;
+  cursor: pointer;
+}
+
+/* Table Content - WITH SCROLL */
+.transaction-table-content-check-transaction {
+  background: white;
+  border: 1px solid #DCE0EB;
+  border-radius: 8px;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: auto;
+  scrollbar-color: #2E2343 #e6e6e6;
+}
+
+/* Custom Scrollbar (Chrome, Edge, Safari) */
+.transaction-table-content-check-transaction::-webkit-scrollbar {
+  width: 14px;
+}
+
+.transaction-table-content-check-transaction::-webkit-scrollbar-track {
+  background: #e6e6e6;
+  border-radius: 8px;
+}
+
+.transaction-table-content-check-transaction::-webkit-scrollbar-thumb {
+  background-color: #2E2343;
+  border-radius: 8px;
+}
+
+.transaction-table-content-check-transaction::-webkit-scrollbar-thumb:hover {
+  background-color: #2E2343;
+}
+
+/* Table Rows */
+.transaction-table-row-check-transaction {
+  display: flex;
+  border-bottom: 1px solid #f1f3f4;
+  background: white;
+  transition: background-color 0.2s ease;
+}
+
+.transaction-table-row-check-transaction:last-child {
+  border-bottom: none;
+}
+
+.transaction-table-row-check-transaction:hover {
+  background: #FFFF;
+}
+
+/* Yellow alternating rows */
+.transaction-row-yellow-check-transaction {
+  background: #FFFAE2 !important;
+}
+
+.transaction-row-yellow-check-transaction:hover {
+  background: #FFFAE2 !important;
+}
+
+/* Table Cells */
+.transaction-cell-check-transaction {
+  padding: 20px 16px;
+  font-size: 14px;
+  color: #1C212D;
+  border-right: 1px solid #f1f3f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.transaction-cell-check-transaction:last-child {
+  border-right: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .transaction-button-container-check-transaction {
+    margin: 15px;
+  }
+
+  .transaction-info-bar-check-transaction {
+    margin: 0 15px 15px 15px;
+  }
+
+  .transaction-table-wrapper-check-transaction {
+    margin: 0 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .transaction-button-container-check-transaction {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .transaction-btn-check-transaction {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+
+  .transaction-info-bar-check-transaction {
+    flex-wrap: wrap;
+    gap: 0;
+    margin: 0 10px 15px 10px;
+  }
+
+  .transaction-card-number-item-check-transaction,
+  .transaction-info-item-check-transaction {
+    min-width: calc(50% - 1px);
+    padding: 15px 20px;
+  }
+
+  .transaction-card-number-item-check-transaction {
+    min-width: 100%;
+  }
+
+  .transaction-card-number-label-check-transaction,
+  .transaction-info-label-check-transaction {
+    font-size: 12px;
+  }
+
+  .transaction-card-number-value-check-transaction,
+  .transaction-info-value-check-transaction {
+    font-size: 14px;
+  }
+
+  .transaction-table-wrapper-check-transaction {
+    margin: 0 10px;
+  }
+
+  .transaction-table-content-check-transaction {
+    height: 400px;
+  }
+
+  /* Make columns stack on mobile */
+  .transaction-col-device-check-transaction,
+  .transaction-col-promotion-check-transaction,
+  .transaction-col-cash-check-transaction,
+  .transaction-col-bonus-check-transaction,
+  .transaction-col-coins-check-transaction,
+  .transaction-col-time-check-transaction,
+  .transaction-col-action-check-transaction,
+  .transaction-col-timestamp-check-transaction,
+  .transaction-col-employee-check-transaction,
+  .transaction-col-location-check-transaction {
+    min-width: 100px;
+  }
+
+  .transaction-header-cell-check-transaction,
+  .transaction-cell-check-transaction {
+    padding: 15px 10px;
+    font-size: 13px;
+  }
+}
+
+/* Smaller mobile devices */
+@media (max-width: 480px) {
+  .transaction-table-container-check-transaction {
+    padding-top: 5px;
+  }
+
+  .transaction-button-container-check-transaction {
+    margin: 8px;
+    padding: 12px;
+    gap: 6px;
+  }
+ .transaction-btn-dropdown-icon-check-transaction {
+  width: 10px;
+  height: 10px;
+}
+
+
+
+  .transaction-btn-check-transaction {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .transaction-btn-icon-check-transaction {
+    width: 14px;
+    height: 14px;
+  }
+
+  .transaction-info-bar-check-transaction {
+    margin: 0 8px 12px 8px;
+  }
+
+  .transaction-card-number-item-check-transaction,
+  .transaction-info-item-check-transaction {
+    min-width: 100%;
+    padding: 12px 15px;
+  }
+
+  .transaction-card-number-label-check-transaction,
+  .transaction-info-label-check-transaction {
+    font-size: 11px;
+  }
+
+  .transaction-card-number-value-check-transaction,
+  .transaction-info-value-check-transaction {
+    font-size: 13px;
+  }
+
+  .transaction-table-wrapper-check-transaction {
+    margin: 0 8px;
+  }
+
+  .transaction-table-header-check-transaction {
+    margin-bottom: 12px;
+  }
+
+  .transaction-table-content-check-transaction {
+    height: 350px;
+  }
+
+  .transaction-header-cell-check-transaction,
+  .transaction-cell-check-transaction {
+    padding: 12px 8px;
+    font-size: 12px;
+  }
+
+  .transaction-col-device-check-transaction,
+  .transaction-col-promotion-check-transaction,
+  .transaction-col-cash-check-transaction,
+  .transaction-col-bonus-check-transaction,
+  .transaction-col-coins-check-transaction,
+  .transaction-col-time-check-transaction,
+  .transaction-col-action-check-transaction,
+  .transaction-col-timestamp-check-transaction,
+  .transaction-col-employee-check-transaction,
+  .transaction-col-location-check-transaction {
+    min-width: 90px;
+  }
+}
