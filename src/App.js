@@ -42,6 +42,8 @@ import MembershipAdd from './components/membership/membershipadd';
 import Reports from './components/Reports/reports';
 import CheckBalance from './checkbalance/checkbalance';
 import Gamereports from './components/Reports/Gamereports';
+import Transaction from "./checkbalance/transaction";
+import SearchCard from "./checkbalance/searchcard";
 
 import "./App.css";
 import { Import } from "lucide-react";
@@ -91,6 +93,8 @@ function DashboardLayout() {
             <Route path="/membershipadd" element={<MembershipAdd />} />
             <Route path="/reports" element={<Reports />} />
             <Route path="/check-balance" element={<CheckBalance />} />
+            <Route path="/transaction" element={<Transaction />} />
+            <Route path="/search-card" element={<SearchCard />} />
 
           </Routes>
         </div>
