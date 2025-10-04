@@ -1,5 +1,5 @@
 /* Demo Container */
-.demo-container {
+.cardproductadd-demo-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,7 +7,7 @@
   background-color: #f3f4f6;
 }
 
-.demo-button {
+.cardproductadd-demo-button {
   padding: 12px 24px;
   background-color: #2563eb;
   color: white;
@@ -19,12 +19,12 @@
   transition: background-color 0.2s ease;
 }
 
-.demo-button:hover {
+.cardproductadd-demo-button:hover {
   background-color: #1d4ed8;
 }
 
 /* Modal Overlay */
-.card-productmodal-overlay {
+.cardproductadd-modal-overlay {
  position: fixed;
   top: 0;
   left: 0;
@@ -39,7 +39,7 @@
 }
 
 /* Modal Container - Exact measurements: 492x450px */
-.card-product modal-container {
+.cardproductadd-modal-container {
   width: 492px;
   max-height: 90vh; 
   text-align: center;
@@ -55,7 +55,7 @@
 }
 
 /* Modal Header */
-.modal-header {
+.cardproductadd-modal-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -65,14 +65,14 @@
   box-sizing: border-box;
 }
 
-.header-content {
+.cardproductadd-header-content {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
 /* Game Icon */
-.game-icon {
+.cardproductadd-game-icon {
   width: 24px;
   height: 24px;
   background-color: #4F46E5;
@@ -83,7 +83,7 @@
   position: relative;
 }
 
-.game-icon-inner {
+.cardproductadd-game-icon-inner {
   width: 16px;
   height: 10px;
   background-color: white;
@@ -91,7 +91,7 @@
   position: relative;
 }
 
-.game-dot-left {
+.cardproductadd-game-dot-left {
   position: absolute;
   top: 2px;
   left: 3px;
@@ -101,7 +101,7 @@
   border-radius: 50%;
 }
 
-.game-dot-right {
+.cardproductadd-game-dot-right {
   position: absolute;
   top: 2px;
   right: 3px;
@@ -111,14 +111,14 @@
   border-radius: 50%;
 }
 
-.modal-title {
+.cardproductadd-modal-title {
   font-size: 18px;
   font-weight: 600;
   color: #111827;
   margin: 0;
 }
 
-.close-button33 {
+.cardproductadd-close-button33 {
   color: #9ca3af;
   background: none;
   border: none;
@@ -130,17 +130,17 @@
   transition: color 0.2s ease;
 }
 
-.close-button:hover {
+.cardproductadd-close-button33:hover {
   color: #4b5563;
 }
 
-.close-icon33 {
+.cardproductadd-close-icon33 {
   width: 40px;
   height: 40px;
 }
 
 /* Table Container */
-.table-container {
+.cardproductadd-table-container {
   flex: 1;
   padding: 20px 20px ;
   overflow: hidden;
@@ -149,7 +149,7 @@
 }
 
 /* Table Wrapper - width: 461px */
-.table-wrapper1 {
+.cardproductadd-table-wrapper1 {
   width: 461px;
   border-radius: 13.72px;
   overflow: hidden;
@@ -157,7 +157,7 @@
 }
 
 /* Games Table */
-.games-table {
+.cardproductadd-games-table {
   width: 100%;
   border-collapse: collapse;
   border: 1px solid #DADCE6; /* outer border */
@@ -166,12 +166,12 @@
 }
 
 /* Table Header - height: 43px */
-.table-header {
+.cardproductadd-table-header {
   height: 43px;
   background-color: #2E2343;
 }
 
-.table-header th {
+.cardproductadd-table-header th {
   height: 43px;
   background-color: #2E2343;
   color: white;
@@ -184,46 +184,46 @@
   border: none;
 }
 
-.table-header th:last-child {
+.cardproductadd-table-header th:last-child {
   border-right: none;
 }
 
-.header-cell-select {
+.cardproductadd-header-cell-select {
   width: 80px;
 }
 
-.header-cell-game {
+.cardproductadd-header-cell-game {
   width: auto;
 }
 
-.header-cell-count {
+.cardproductadd-header-cell-count {
   width: 100px;
 }
 
 /* Table Body */
-.table-body {
+.cardproductadd-table-body {
   background-color: white;
 }
 
-.body-row {
+.cardproductadd-body-row {
   height: 26.875px;
   transition: background-color 0.2s ease;
   /* 🚫 no border-bottom → removes horizontal lines */
 }
 
-.body-row:hover {
+.cardproductadd-body-row:hover {
   background-color: #f9fafb !important;
 }
 
-.row-yellow {
+.cardproductadd-row-yellow {
   background-color: #FEF9E7;
 }
 
-.row-white {
+.cardproductadd-row-white {
   background-color: white;
 }
 
-.table-cell {
+.cardproductadd-table-cell {
   text-align: center;
   vertical-align: middle;
   padding: 0 16px;
@@ -240,50 +240,34 @@
   font-style: normal;
 }
 
-.table-cell:last-child {
+.cardproductadd-table-cell:last-child {
   border-right: none;
 }
 
-.cell-select {
+.cardproductadd-cell-select {
   width: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.cell-game {
+.cardproductadd-cell-game {
   width: auto;
 }
 
-.cell-count {
+.cardproductadd-cell-count {
   width: 100px;
 }
 
 /* Checkbox Styles */
-.checkbox-container1 {
+.cardproductadd-checkbox-container1 {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.checkbox-input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-}
-/* Checkbox Styles */
-.checkbox-container1 {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.checkbox-input {
+.cardproductadd-checkbox-input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -292,7 +276,7 @@
   margin: 0;
 }
 
-.checkbox-label {
+.cardproductadd-checkbox-label {
   width: 16px;   /* consistent fixed size */
   height: 16px;
   border-radius: 3px;
@@ -304,27 +288,27 @@
   transition: all 0.2s ease;
 }
 
-.checkbox-checked {
+.cardproductadd-checkbox-checked {
   background-color: #F59E0B;
   border: 2px solid #F59E0B;
 }
 
-.checkbox-unchecked {
+.cardproductadd-checkbox-unchecked {
   background-color: white;
   border: 2px solid #d1d5db;
 }
 
-.checkbox-label:hover {
+.cardproductadd-checkbox-label:hover {
   border-color: #F59E0B;
 }
 
-.checkmark {
+.cardproductadd-checkmark {
   width: 12px;
   height: 12px;
   color: white;
 }
 
-.checkbox-label1 {
+.cardproductadd-checkbox-label1 {
   width: 16px;   /* consistent fixed size */
   height: 16px;
   border-radius: 3px;
@@ -334,30 +318,10 @@
   justify-content: center;
   position: relative;
   transition: all 0.2s ease;
-}
-
-.checkbox-checked {
-  background-color: #F59E0B;
-  border: 2px solid #F59E0B;
-}
-
-.checkbox-unchecked {
-  background-color: white;
-  border: 2px solid #d1d5db;
-}
-
-.checkbox-label:hover {
-  border-color: #F59E0B;
-}
-
-.checkmark {
-  width: 12px;
-  height: 12px;
-  color: white;
 }
 
 /* Modal Footer */
-.modal-footer {
+.cardproductadd-modal-footer {
   display: flex;
   gap: 12px;
   padding: 16px 20px 20px 20px;
@@ -365,8 +329,8 @@
   justify-content: flex-end;
 }
 
-.save-button,
-.cancel-button {
+.cardproductadd-save-button,
+.cardproductadd-cancel-button {
   width: 90.70px;
   height: 34.82px;
   font-weight: 500;
@@ -377,25 +341,25 @@
   font-size: 14px;
 }
 
-.save-button {
+.cardproductadd-save-button {
   background-color: #F59E0B;
   color: #111827;
 }
 
-.save-button:hover {
+.cardproductadd-save-button:hover {
   background-color: #D97706;
 }
 
-.cancel-button {
+.cardproductadd-cancel-button {
   background-color: #374151;
   color: white;
 }
 
-.cancel-button:hover {
+.cardproductadd-cancel-button:hover {
   background-color: #1F2937;
 }
 
-.game-image {
+.cardproductadd-game-image {
   width: 24px;
   height: 24px;
   object-fit: contain;
