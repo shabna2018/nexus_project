@@ -1,5 +1,5 @@
 /* Modal Overlay */
-.modal-overlay-search-card-check {
+.modal-overlay-search-card-check-v2 {
   position: fixed;
   top: 0;
   left: 0;
@@ -13,7 +13,7 @@
 }
 
 /* Modal Container */
-.modal-container-search-card-check {
+.modal-container-search-card-check-v2 {
   background: white;
   border-radius: 12px;
   width: 590px;
@@ -24,35 +24,38 @@
 }
 
 /* Header */
-.modal-header-search-card-check {
-  background: #4a3f5c;
+.modal-header-search-card-check-v2 {
+  background: white;
   padding: 16px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+      border-bottom: 1px solid #DCE0EB;
 }
 
-.modal-title-wrapper-search-card-check {
+.modal-title-wrapper-search-card-check-v2 {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.card-icon-search-card-check {
-  width: 20px;
-  height: 20px;
+.card-icon-search-card-check-v2 {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
 }
 
-.modal-title-search-card-check {
-  font-size: 16px;
+.modal-title-search-card-check-v2 {
+  font-size: 19px;
   font-weight: 600;
-  color: white;
+  color: #1C212D;
+  font-family: 'Roboto', sans-serif;
 }
 
-.close-btn-search-card-check {
+.close-btn-search-card-check-v2 {
   background: none;
   border: none;
-  color: white;
+  color: #6b7280;
   cursor: pointer;
   padding: 4px;
   display: flex;
@@ -62,80 +65,95 @@
   transition: opacity 0.2s;
 }
 
-.close-btn-search-card-check:hover {
+.close-btn-search-card-check-v2:hover {
   opacity: 1;
+  color: #1f2937;
+}
+
+/* Info Container - Wraps Info Tab and Form with Purple Background */
+.info-container-search-card-check-v2 {
+  
+  margin: 23px 20px 20px 20px;
+  border: 1px solid #DCE0EB;
+  border-radius: 12px ;
+  overflow: hidden;
 }
 
 /* Info Tab */
-.info-tab-search-card-check {
-  background: #3d3557;
+.info-tab-search-card-check-v2 {
+  background: #2E2343;
+  font-family: 'roboto' sans-serif;
   color: white;
-  padding: 10px 20px;
-  font-size: 14px;
-  font-weight: 500;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 /* Search Form */
-.search-form-search-card-check {
-  padding: 24px 20px;
+.search-form-search-card-check-v2 {
+  padding: 20px;
   background: white;
+  border-radius: 0 0 12px 12px;
 }
 
-.form-row-search-card-check {
+.form-row-search-card-check-v2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
   margin-bottom: 16px;
 }
 
-.form-row-search-card-check.single-col {
-  grid-template-columns: 1fr;
-}
-
-.form-row-search-card-check:last-child {
+.form-row-search-card-check-v2:last-child {
   margin-bottom: 0;
 }
 
-.form-group-search-card-check {
+.form-group-search-card-check-v2 {
   display: flex;
-  flex-direction: column;
-  gap: 6px;
+  flex-direction: row;
+  align-items: center;
+  gap: 1px;
 }
 
-.form-label-search-card-check {
-  font-size: 13px;
+.form-label-search-card-check-v2 {
+  font-size: 14px;
   font-weight: 500;
-  color: #1f2937;
+  color: #000;
+  font-family: 'roboto' sans-serif;
+  white-space: nowrap;
+  min-width: 80px;
 }
 
-.form-input-search-card-check {
+.form-input-search-card-check-v2 {
   padding: 10px 12px;
-  border: 1px solid #d1d5db;
+  width: 170px;
+  height: 29px;
+  font-family: 'Montserrat', sans-serif;
+  border: 1px solid #e5e7eb;
   border-radius: 6px;
   font-size: 14px;
+  font-weight: 400;
   background: white;
   transition: border-color 0.2s;
-  color: #6b7280;
+  color: #92929D;
 }
 
-.form-input-search-card-check:focus {
+.form-input-search-card-check-v2:focus {
   outline: none;
   border-color: #4361ee;
   color: #1f2937;
 }
 
-.form-input-search-card-check::placeholder {
+.form-input-search-card-check-v2::placeholder {
   color: #9ca3af;
 }
 
-.search-btn-wrapper-search-card-check {
+.search-btn-wrapper-search-card-check-v2 {
   display: flex;
   align-items: flex-end;
-  grid-column: span 2;
 }
 
-.search-btn-search-card-check {
-  background: #4361ee;
+.search-btn-search-card-check-v2 {
+  background: #2D4CBA;
   color: white;
   border: none;
   padding: 10px 24px;
@@ -147,17 +165,90 @@
   align-items: center;
   gap: 8px;
   transition: background 0.2s;
-  width: 100%;
+  white-space: nowrap;
   justify-content: center;
+  height: fit-content;
 }
 
-.search-btn-search-card-check:hover {
-  background: #3451d8;
+.search-btn-search-card-check-v2:hover {
+  background: #2D4CBA;
 }
 
-/* Results Container */
-.results-container-search-card-check {
+.search-btn-icon-search-card-check-v2 {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+/* Table Header Container - Separate */
+.table-header-container-search-card-check-v2 {
+  margin: 0 20px;
+  margin-bottom: 16px;
+}
+
+.table-header-wrapper-search-card-check-v2 {
+  display: flex;
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.table-header-search-card-check-v2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 16px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #495057;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.table-header-search-card-check-v2:last-child {
+  border-right: none;
+}
+
+.sort-arrow-search-card-check-v2 {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+  display: inline-block;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+/* Column Widths - 4 columns */
+.col-firstname-search-card-check-v2 {
+  width: 25%;
+  min-width: 110px;
+}
+
+.col-lastname-search-card-check-v2 {
+  width: 25%;
+  min-width: 110px;
+}
+
+.col-cardnumber-search-card-check-v2 {
+  width: 25%;
+  min-width: 120px;
+}
+
+.col-phone-search-card-check-v2 {
+  width: 25%;
+  min-width: 140px;
+}
+
+/* Table Content Container - Separate */
+.table-content-container-search-card-check-v2 {
   margin: 0 20px 20px 20px;
+}
+
+/* Table Content - WITH GameReport Style Scroll */
+.table-content-search-card-check-v2 {
   background: white;
   border: 1px solid #dee2e6;
   border-radius: 8px;
@@ -167,82 +258,27 @@
   scrollbar-color: #2E2343 #e6e6e6;
 }
 
-/* Custom Scrollbar (Chrome, Edge, Safari) */
-.results-container-search-card-check::-webkit-scrollbar {
+/* Custom Scrollbar (Chrome, Edge, Safari) - GameReport Style */
+.table-content-search-card-check-v2::-webkit-scrollbar {
   width: 14px;
 }
 
-.results-container-search-card-check::-webkit-scrollbar-track {
+.table-content-search-card-check-v2::-webkit-scrollbar-track {
   background: #e6e6e6;
   border-radius: 8px;
 }
 
-.results-container-search-card-check::-webkit-scrollbar-thumb {
+.table-content-search-card-check-v2::-webkit-scrollbar-thumb {
   background-color: #2E2343;
   border-radius: 8px;
 }
 
-.results-container-search-card-check::-webkit-scrollbar-thumb:hover {
+.table-content-search-card-check-v2::-webkit-scrollbar-thumb:hover {
   background-color: #2E2343;
 }
 
-/* Table Header */
-.table-header-wrapper-search-card-check {
-  display: flex;
-  background: #f8f9fa;
-  position: sticky;
-  top: 0;
-  z-index: 2;
-  border-bottom: 1px solid #dee2e6;
-}
-
-.table-header-search-card-check {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  padding: 20px 16px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #495057;
-  background: #f8f9fa;
-  text-align: center;
-  border-right: 1px solid #f1f3f4;
-}
-
-.table-header-search-card-check:last-child {
-  border-right: none;
-}
-
-.table-header-search-card-check svg {
-  display: inline-block;
-  margin-left: 4px;
-  vertical-align: middle;
-}
-
-/* Column Widths */
-.col-firstname-search-card-check {
-  width: 25%;
-  min-width: 120px;
-}
-
-.col-lastname-search-card-check {
-  width: 25%;
-  min-width: 120px;
-}
-
-.col-cardnumber-search-card-check {
-  width: 25%;
-  min-width: 120px;
-}
-
-.col-phone-search-card-check {
-  width: 25%;
-  min-width: 140px;
-}
-
 /* Table Rows */
-.table-row-search-card-check {
+.table-row-search-card-check-v2 {
   display: flex;
   border-bottom: 1px solid #f1f3f4;
   background: white;
@@ -250,25 +286,34 @@
   transition: background-color 0.2s ease;
 }
 
-.table-row-search-card-check:last-child {
+.table-row-search-card-check-v2:last-child {
   border-bottom: none;
 }
 
-.table-row-search-card-check:hover {
+.table-row-search-card-check-v2:hover {
   background: #f9fafb;
 }
 
-/* Yellow alternating rows */
-.highlighted-row-search-card-check {
+/* Yellow alternating rows - like Tax Category */
+.row-yellow-search-card-check-v2 {
   background: #FFFAE2 !important;
 }
 
-.highlighted-row-search-card-check:hover {
+.row-yellow-search-card-check-v2:hover {
   background: #FFFAE2 !important;
+}
+
+/* Selected/Highlighted row */
+.highlighted-row-search-card-check-v2 {
+  background: #e3f2fd !important;
+}
+
+.highlighted-row-search-card-check-v2:hover {
+  background: #e3f2fd !important;
 }
 
 /* Table Cells */
-.table-cell-search-card-check {
+.table-cell-search-card-check-v2 {
   padding: 20px 16px;
   font-size: 14px;
   color: #495057;
@@ -281,12 +326,12 @@
   text-align: center;
 }
 
-.table-cell-search-card-check:last-child {
+.table-cell-search-card-check-v2:last-child {
   border-right: none;
 }
 
 /* Modal Footer */
-.modal-footer-search-card-check {
+.modal-footer-search-card-check-v2 {
   padding: 20px;
   display: flex;
   justify-content: flex-end;
@@ -295,7 +340,7 @@
   background: white;
 }
 
-.okay-btn-search-card-check {
+.okay-btn-search-card-check-v2 {
   background: #fbbf24;
   color: #000;
   border: none;
@@ -307,11 +352,11 @@
   transition: background 0.2s;
 }
 
-.okay-btn-search-card-check:hover {
+.okay-btn-search-card-check-v2:hover {
   background: #f59e0b;
 }
 
-.cancel-btn-search-card-check {
+.cancel-btn-search-card-check-v2 {
   background: #6b7280;
   color: white;
   border: none;
@@ -323,34 +368,50 @@
   transition: background 0.2s;
 }
 
-.cancel-btn-search-card-check:hover {
+.cancel-btn-search-card-check-v2:hover {
   background: #4b5563;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .modal-container-search-card-check {
+  .modal-container-search-card-check-v2 {
     width: 95%;
     max-height: 95vh;
   }
 
-  .form-row-search-card-check {
+  .form-row-search-card-check-v2 {
     grid-template-columns: 1fr;
   }
 
-  .search-btn-wrapper-search-card-check {
-    grid-column: span 1;
+  .search-btn-wrapper-search-card-check-v2 {
+    margin-top: 16px;
   }
 
-  .search-form-search-card-check {
+  .search-btn-search-card-check-v2 {
+    width: 100%;
+  }
+
+  .search-form-search-card-check-v2 {
     padding: 16px;
   }
 
-  .results-container-search-card-check {
-    padding: 0 16px;
+  .info-container-search-card-check-v2 {
+    margin: 0 16px 16px 16px;
   }
 
-  .modal-footer-search-card-check {
+  .table-header-container-search-card-check-v2,
+  .table-content-container-search-card-check-v2 {
+    margin: 0 16px 16px 16px;
+  }
+
+  .modal-footer-search-card-check-v2 {
     padding: 16px;
+  }
+
+  .col-firstname-search-card-check-v2,
+  .col-lastname-search-card-check-v2,
+  .col-cardnumber-search-card-check-v2,
+  .col-phone-search-card-check-v2 {
+    min-width: 100px;
   }
 }

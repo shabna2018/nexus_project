@@ -30,6 +30,7 @@ function TopBar() {
     "/sticker-product": ["Products", "Sticker Product"],
     "/combo-product": ["Products", "Combo Product"],
     "/game-Cat": ["Products", "Combo Product"],
+    "/transaction":["Check Balance","Transaction"],
     "/check-balance": ["Check Balance"], // ✅ Wallet breadcrumb
     // Add more routes as needed
   };
