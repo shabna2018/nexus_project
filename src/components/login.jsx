@@ -16,24 +16,24 @@ function Login() {
   };
 
   return (
-    <div className="login-page" style={{ backgroundImage: `url(${bg})` }}>
-      <div className="login-box">
-        <img src={logo} alt="Logo" className="logo-img" />
+    <div className="login-page-lg" style={{ backgroundImage: `url(${bg})` }}>
+      <div className="login-box-lg">
+        <img src={logo} alt="Logo" className="logo-img-lg" />
         <h2>Welcome Back</h2>
         <p>Enter your User name and password to login</p>
 
         <form onSubmit={handleLogin}>
-          <div className="input-box">
-            <img src={userIcon} alt="User Icon" className="icon-img" />
+          <div className="input-box-lg">
+            <img src={userIcon} alt="User Icon" className="icon-img-lg" />
             <input type="text" required />
           </div>
 
-          <div className="input-box">
-            <img src={passIcon} alt="Password Icon" className="icon-img" />
+          <div className="input-box-lg">
+            <img src={passIcon} alt="Password Icon" className="icon-img-lg" />
             <input type="password" required />
           </div>
 
-          <button type="submit" className="login-btn">LOGIN</button>
+          <button type="submit" className="login-btn-lg">LOGIN</button>
         </form>
       </div>
     </div>

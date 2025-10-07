@@ -16,7 +16,6 @@
   .taxcategorysettings-modal {
     background: white;
     border-radius: 12px;
-    
     max-width: 55%;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -132,8 +131,8 @@
   
   /* Tax ID Input */
   .taxcategorysettings-input-taxid {
-    width: 30px;
-    height: 12px;
+    width: 45px;
+    height: 30px;
     padding: 10px 14px;
     border: 1px solid #d1d1d1;
     border-radius: 6px;
@@ -153,8 +152,8 @@
   
   /* Tax Category Input */
   .taxcategorysettings-input-taxcategory {
-    width: 140px;
-    height: 12px;
+    width: 160px;
+    height: 30px;
     padding: 10px 14px;
     border: 1px solid #d1d1d1;
     border-radius: 6px;
@@ -175,7 +174,7 @@
   /* Description Input */
   .taxcategorysettings-input-description {
    width: 220px;
-      height: 12px;
+      height: 30px;
     padding: 10px 14px;
     border: 1px solid #d1d1d1;
     border-radius: 6px;
@@ -312,4 +311,35 @@
     background: #2C3142;
     transform: translateY(-1px);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 1400px) {
+    .taxcategorysettings-modal {
+      max-width: 65%;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .taxcategorysettings-modal {
+      max-width: 75%;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .taxcategorysettings-modal {
+      max-width: 85%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .taxcategorysettings-modal {
+      max-width: 95%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .taxcategorysettings-modal {
+      max-width: 98%;
+    }
   }

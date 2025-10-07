@@ -57,101 +57,97 @@ const DisplayGroupAdd = ({ isOpen, onClose, onSave }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="modal-overlay" onClick={handleOverlayClick}>
-      <div className="modal-container">
+    <div className="modal-overlay-displaygroupadd" onClick={handleOverlayClick}>
+      <div className="modal-container-displaygroupadd">
         {/* Modal Header */}
-        <div className="modal-header">
-          <div className="modal-title-section">
-            <img src={ConsoleIcon} alt="Console Icon" className="modal-icon" />
-            <h2 className="modal-title">New Group</h2>
+        <div className="modal-header-displaygroupadd">
+          <div className="modal-title-section-displaygroupadd">
+            <img src={ConsoleIcon} alt="Console Icon" className="modal-icon-displaygroupadd" />
+            <h2 className="modal-title-displaygroupadd">New Group</h2>
           </div>
-          <button className="close-btn" onClick={handleClose}>
-            <svg className="close-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <button className="close-btn-displaygroupadd" onClick={handleClose}>
+            <svg className="close-icon-displaygroupadd" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
 
         {/* Details Section */}
-        <div className="details-section">
-          <h3 className="details-title">Details</h3>
+        <div className="details-section-displaygroupadd">
+          <h3 className="details-title-displaygroupadd">Details</h3>
         </div>
 
         {/* Details Container */}
-        <div className="details-container">
+        <div className="details-container-displaygroupadd">
           {/* Form Content */}
-          <div className="form-content">
-            <div className="form-group">
-              <label className="form-label" htmlFor="name">Name</label>
+          <div className="form-content-displaygroupadd">
+            <div className="form-group-displaygroupadd">
+              <label className="form-label-displaygroupadd" htmlFor="name">Name</label>
               <input
                 type="text"
                 id="name"
                 name="name"
-                className="form-input"
+                className="form-input-displaygroupadd"
                 placeholder="Trampoline"
                 value={formData.name}
                 onChange={handleInputChange}
               />
             </div>
 
-            <div className="form-group">
-              <label className="form-label" htmlFor="group">Group</label>
+            <div className="form-group-displaygroupadd">
+              <label className="form-label-displaygroupadd" htmlFor="group">Group</label>
               <input
                 type="text"
                 id="group"
                 name="group"
-                className="form-input"
+                className="form-input-displaygroupadd"
                 placeholder="Products/Climbing Wall/Low height/"
                 value={formData.group}
                 onChange={handleInputChange}
               />
             </div>
 
-            <div className="form-group">
-              <label className="form-label">Image</label>
-              <div className="image-upload-section">
-                <div className="file-input-container">
-                  <div className="file-input-wrapper">
+            <div className="form-group-displaygroupadd">
+              <label className="form-label-displaygroupadd">Image</label>
+              <div className="image-upload-section-displaygroupadd">
+                <div className="file-input-container-displaygroupadd">
+                  <div className="file-input-wrapper-displaygroupadd">
                     <input
                       type="file"
                       id="image"
                       name="image"
-                      className="file-input"
+                      className="file-input-displaygroupadd"
                       accept="image/*"
                       onChange={handleFileChange}
                     />
-                    <label htmlFor="image" className="file-input-label">
-  <div className="file-input-left-section">
-    <span className="file-input-text">Choose File</span>
-  </div>
-  <div className="file-input-separator"></div>
-  <div className="file-input-right-section">
-    <span className="file-preview-text">
-      {formData.imagePreview || 'Trampoline.jpg'}
-    </span>
-  </div>
-</label>
+                    <label htmlFor="image" className="file-input-label-displaygroupadd">
+                      <div className="file-input-left-section-displaygroupadd">
+                        <span className="file-input-text-displaygroupadd">Choose File</span>
+                      </div>
+                      <div className="file-input-separator-displaygroupadd"></div>
+                      <div className="file-input-right-section-displaygroupadd">
+                        <span className="file-preview-text-displaygroupadd">
+                          {formData.imagePreview || 'Trampoline.jpg'}
+                        </span>
+                      </div>
+                    </label>
                   </div>
                 </div>
               </div>
             </div>
-          </div> {/* ✅ closed .form-content */}
-
-        
-          
-        </div>
-        <div className="modal-actions">
-            <button className="action-button save-btn" onClick={handleSave}>
-              Save
-            </button>
-            <button className="action-button close-action-btn" onClick={handleClose}>
-              Close
-            </button>
           </div>
+        </div>
+
+        <div className="modal-actions-displaygroupadd">
+          <button className="action-button-displaygroupadd save-btn-displaygroupadd" onClick={handleSave}>
+            Save
+          </button>
+          <button className="action-button-displaygroupadd close-action-btn-displaygroupadd" onClick={handleClose}>
+            Close
+          </button>
+        </div>
       </div>
-      
     </div>
-    
   );
 };
 

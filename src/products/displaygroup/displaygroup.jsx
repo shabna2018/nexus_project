@@ -1,19 +1,10 @@
 import React, { useState } from 'react';
 import './displaygroup.css';
-import DisplayGroupIcon from '../../components/assets/display-group-icon.png';
-import ArrowIcon from '../../components/assets/arrows.png';
-import ActiveCheckmarkIcon from '../../components/assets/checkbox_yellow.png';
-import GroupAddIcon from '../../components/assets/group-add.png';
-import GroupCancelIcon from '../../components/assets/group-cancel.png';
-import DisplayGroupAdd from './displaygroupadd';
-import BlackAddIcon from '../../components/assets/black_add.png';
-import BlackCancelIcon from '../../components/assets/black_cancel.png';
-import ChecklistIcon1 from '../../components/assets/Checklist.png';
+import DisplayGroupAdd from "./displaygroupadd";
 
 const DisplayGroup = () => {
   const [showAddModal, setShowAddModal] = useState(false);
 
-  // ✅ groupData is now state
   const [groupData, setGroupData] = useState([
     {
       id: 1,
@@ -46,7 +37,6 @@ const DisplayGroup = () => {
     }
   ]);
 
-  // ✅ Toggle handler
   const handleToggleActive = (id) => {
     setGroupData((prev) =>
       prev.map((group) =>
@@ -59,111 +49,100 @@ const DisplayGroup = () => {
   const handleCloseModal = () => setShowAddModal(false);
   const handleSaveGroup = (groupData) => {
     console.log('New group data:', groupData);
+    setShowAddModal(false);
   };
 
   return (
-    <div className="display-group-container">
+    <div className="display-group-container-gd">
       {/* Header */}
-      <div className="display-group-header">
-        <h1 className="page-title">
-          <img src={DisplayGroupIcon} alt="Display Group Icon" className="title-icon" />
+      <div className="display-group-header-gd">
+        <h1 className="page-title-gd">
+          <img
+            src={require('../../components/assets/display-group-icon.png')}
+            alt="Display Group Icon"
+            className="title-icon-gd"
+          />
           Display Group
         </h1>
-        <div className="controls-section">
-          <button className="refresh-btn">Refresh</button>
+        <div className="controls-section-gd">
+          <button className="refresh-btn-gd">Refresh</button>
         </div>
       </div>
 
       {/* Table */}
-      <div className="table-container">
-        <div className="table-header">
-          <div className="column-header">
-            Active <img src={ArrowIcon} alt="Sort Arrow" className="sort-arrow" />
+      <div className="table-container-gd">
+        <div className="table-header-gd">
+          <div className="column-header-gd">
+            Active <img src={require('../../components/assets/arrows.png')} alt="Sort" className="sort-arrow-gd" />
           </div>
-          <div className="column-header">
-            Display order <img src={ArrowIcon} alt="Sort Arrow" className="sort-arrow" />
+          <div className="column-header-gd">
+            Display order <img src={require('../../components/assets/arrows.png')} alt="Sort" className="sort-arrow-gd" />
           </div>
-          <div className="column-header">Group</div>
-          <div className="header-actions">
-            <button className="add-group-btn" onClick={handleAddGroup}>Add Group</button>
+          <div className="column-header-gd">Group</div>
+          <div className="column-header-gd header-actions-gd">
+            <button className="add-group-btn-gd" onClick={handleAddGroup}>Add Group</button>
           </div>
         </div>
 
         {/* Group List */}
-        <div className="group-list">
+        <div className="group-list-gd">
           {groupData.map((group) => (
-            <div key={group.id} className="group-item">
-              <div className="group-main-row">
-                <div className="active-cell">
+            <div key={group.id} className="group-item-gd">
+              <div className="group-main-row-gd">
+                <div className="active-cell-gd">
                   <button
-                    className="active-toggle-btn"
+                    className="active-toggle-btn-gd"
                     onClick={() => handleToggleActive(group.id)}
                   >
-                    {/* Outer box always visible */}
-                    <img
-                      src={ActiveCheckmarkIcon}
-                      alt="Active"
-                      className="active-checkmark"
-                    />
-                    {/* Overlay checklist when active */}
-                    {group.active && (
-                      <img
-                        src={ChecklistIcon1}
-                        alt="Checklist"
-                        className="checklist-icon1"
-                      />
-                    )}
+                    <div className={`checkbox-outer-gd ${group.active ? 'active-gd' : ''}`}>
+                      {group.active && <img src={require('../../components/assets/Checklist.png')} alt="Check" className="checkbox-inner-gd" />}
+                    </div>
                   </button>
                 </div>
 
-                <div className="display-order-cell">
-                  <span className="order-number">{group.displayOrder}</span>
+                <div className="display-order-cell-gd">
+                  <span className="order-number-gd">{group.displayOrder}</span>
                 </div>
-                <div className="group-name-cell">{group.groupName}</div>
-                <div className="group-actions-cell">
-                  <button className="action-btn edit-btn">
-                    <img src={GroupAddIcon} alt="Edit" className="action-icon" />
+                <div className="group-name-cell-gd">
+                  <span className="group-name-gd">{group.groupName}</span>
+                </div>
+                <div className="group-actions-cell-gd">
+                  <button className="action-btn-gd add-btn">
+                    <img src={require('../../components/assets/group-add.png')} alt="Add" className="action-icon-gd" />
                   </button>
-                  <button className="action-btn delete-btn">
-                    <img src={GroupCancelIcon} alt="Delete" className="action-icon" />
+                  <button className="action-btn-gd cancel-btn">
+                    <img src={require('../../components/assets/group-cancel.png')} alt="Cancel" className="action-icon-gd" />
                   </button>
                 </div>
               </div>
 
               {/* Sub Items */}
-              <div className="sub-items">
+              <div className="sub-items-gd">
                 {group.subItems.map((item, idx) => (
-                  <div key={idx} className="sub-item">
-                    <div className="sub-item-active-cell" />
-                    <div className="sub-item-order-cell" />
-                    <div className="sub-item-content-cell">{item.name}</div>
-                    <div className="sub-item-actions-cell">
-                      <div className="sub-item-extra-actions">
-                        <button className="action-btn add-btn">
-                          <img src={BlackAddIcon} alt="Add" className="action-icon" />
-                        </button>
-                        <button className="action-btn cancel-btn">
-                          <img src={BlackCancelIcon} alt="Cancel" className="action-icon" />
-                        </button>
-                      </div>
-                      <button className="action-btn edit-btn">
-                        <img src={GroupAddIcon} alt="Edit" className="action-icon small" />
+                  <div key={idx} className="sub-item-gd">
+                    <div className="sub-item-active-cell-gd"></div>
+                    <div className="sub-item-order-cell-gd"></div>
+                    <div className="sub-item-content-cell-gd">
+                      <span className="sub-item-content-gd">{item.name}</span>
+                    </div>
+                    <div className="sub-item-actions-cell-gd">
+                      <button className="action-btn-gd add-btn">
+                        <img src={require('../../components/assets/black_add.png')} alt="Add" className="action-icon-gd" />
                       </button>
-                      <button className="action-btn delete-btn">
-                        <img src={GroupCancelIcon} alt="Delete" className="action-icon small" />
+                      <button className="action-btn-gd cancel-btn">
+                        <img src={require('../../components/assets/black_cancel.png')} alt="Cancel" className="action-icon-gd" />
                       </button>
                     </div>
                   </div>
                 ))}
-                <div className="sub-items-bottom-line"></div>
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Modal */}
-      <DisplayGroupAdd
+      {/* Add Group Modal */}
+      <DisplayGroupAdd 
         isOpen={showAddModal}
         onClose={handleCloseModal}
         onSave={handleSaveGroup}

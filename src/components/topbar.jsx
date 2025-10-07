@@ -23,6 +23,7 @@ function TopBar() {
     "/add-location": ["Settings", "Location Table", "Location info"],
     "/edit-location": ["Settings", "Location Table", "Edit Location"],
     "/card-product": ["Products", "Card Product"],
+    "/display-group":["Products","Display Group"],
     "/coin-product": ["Products", "Coin Product"],
     "/time-product": ["Products", "Time Product"],
     "/item-product": ["Products", "Item Product"],
